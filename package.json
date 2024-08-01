@@ -1,0 +1,10 @@
+{
+  "name": "facebook-clone",
+  "version": "0.0.0",
+  "description": "Facebook web clone, full-stack project",
+  "keywords": ["React", "Express", "Socket.io", "Facebook"],
+  "author": "José Alejandro Rodríguez Romero ~ Jerast",
+  "license": "Proprietary",
+  "scripts": {
+  }
+}
