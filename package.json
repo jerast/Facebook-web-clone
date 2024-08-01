@@ -6,5 +6,12 @@
   "author": "José Alejandro Rodríguez Romero ~ Jerast",
   "license": "Proprietary",
   "scripts": {
-  }
+    "prod": "pnpm --filter '**' prod",
+    "host": "pnpm --filter '**' host",
+    "dev": "pnpm --filter '**' dev"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ]
 }
