@@ -1,0 +1,14 @@
+# Environment
+.env
+
+# Logs
+*.log
+
+# Code directories and files
+node_modules
+dist
+docs
+
+# Editor directories and files
+.vscode
+.vscode/*
