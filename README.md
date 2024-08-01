@@ -60,3 +60,7 @@ The goal of this project is to replicate the main functionalities of Facebook, i
 - **Socket.io**: Library for real-time connections.
 - **JWT (JSON Web Tokens)**: Standard for authentication.
 - **Mongoose**: ODM for MongoDB, facilitating database interaction.
+
+## License
+
+This project is under an "All rights reserved" license. See the `LICENSE` file for more details.
