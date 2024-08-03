@@ -6,9 +6,9 @@
 
 # Code directories and files
 node_modules
+original
 dist
 docs
 
 # Editor directories and files
 .vscode
-.vscode/*
