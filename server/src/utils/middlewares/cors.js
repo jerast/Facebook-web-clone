@@ -1,6 +1,7 @@
 import CORS from 'cors'
+import { ALLOWED_IPS } from '#config/allowed_ips.js'
 
-const ACCEPTED_ORIGINS =[]
+const ACCEPTED_ORIGINS = ALLOWED_IPS
 
 export const cors = () => 
   CORS({

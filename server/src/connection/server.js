@@ -2,6 +2,7 @@ import http from 'node:http'
 import express from 'express'
 
 import { PORT } from '#config/environment.js'
+import { Socket } from '#connection/socket.js'
 import { cors } from '#middlewares/cors.js'
 
 export class Server {
@@ -12,6 +13,7 @@ export class Server {
   constructor () {
     this.#app = express()
     this.#server = http.createServer( this.#app )
+    this.#socket = new Socket( this.#server )
   }
 
   #disableTags () {
