@@ -3,6 +3,7 @@ import express from 'express'
 
 import { PORT } from '#config/environment.js'
 import { Socket } from '#connection/socket.js'
+import { mongodb } from '#connection/mongodb.js'
 import { cors } from '#middlewares/cors.js'
 
 export class Server {
@@ -16,6 +17,10 @@ export class Server {
     this.#socket = new Socket( this.#server )
   }
 
+  #db_connection () {
+    mongodb()
+  }
+
   #disableTags () {
     this.#app.disable( 'x-powered-by' )
     this.#app.disable( 'etag' )
@@ -24,10 +29,11 @@ export class Server {
   #middlewares () {
     this.#app.use( cors() )
     this.#app.use( express.json() )
-    this.#app.use( express.static(process.cwd() + '/public') )
+    this.#app.use( express.static(`${process.cwd()}/public`) )
   }
 
   run () {
+    this.#db_connection()
     this.#disableTags()
     this.#middlewares()
 
