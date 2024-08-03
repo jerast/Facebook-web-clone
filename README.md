@@ -18,7 +18,7 @@ The goal of this project is to replicate the main functionalities of Facebook, i
 ## Objectives
 
   **Initial Setup**
-  - [ ] Set up the development environment
+  - [x] Set up the development environment
   - [ ] Configure the database and server
   
   **Initial Setup**
