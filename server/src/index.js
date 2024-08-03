@@ -1,1 +1,3 @@
-console.log('server init')
+import { Server } from '#connection/server.js'
+
+new Server().run()
