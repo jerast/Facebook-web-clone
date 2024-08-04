@@ -17,7 +17,7 @@ export class Server {
     this.#socket = new Socket( this.#server )
   }
 
-  #db_connection () {
+  #database () {
     mongodb()
   }
 
@@ -33,7 +33,7 @@ export class Server {
   }
 
   run () {
-    this.#db_connection()
+    this.#database()
     this.#disableTags()
     this.#middlewares()
 
