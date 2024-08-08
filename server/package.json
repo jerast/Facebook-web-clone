@@ -23,6 +23,13 @@
   "imports": {
     "#config/*": "./src/config/*",
     "#connection/*": "./src/connection/*",
-    "#middlewares/*": "./src/utils/middlewares/*"
+    "#routes/*": "./src/routes/*",
+    "#controllers/*": "./src/controllers/*",
+    "#database/*": "./src/database/*",
+    "#models/*": "./src/models/*",
+    "#helpers/*": "./src/utils/helpers/*",
+    "#jwt/*": "./src/utils/jwt/*",
+    "#middlewares/*": "./src/utils/middlewares/*",
+    "#validators/*": "./src/utils/validators/*"
   }
 }
