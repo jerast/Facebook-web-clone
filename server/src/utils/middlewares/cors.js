@@ -1,5 +1,5 @@
 import CORS from 'cors'
-import { ALLOWED_IPS } from '#config/allowed_ips.js'
+import { ALLOWED_IPS } from '#config/settings.js'
 
 const ACCEPTED_ORIGINS = ALLOWED_IPS
 

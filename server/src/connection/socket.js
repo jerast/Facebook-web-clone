@@ -1,5 +1,5 @@
 import { Server as SocketServer } from 'socket.io'
-import { ALLOWED_IPS } from '#config/allowed_ips.js'
+import { ALLOWED_IPS } from '#config/settings.js'
 
 export class Socket {
   #io
