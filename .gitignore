@@ -6,9 +6,12 @@
 
 # Code directories and files
 node_modules
-original
 dist
 docs
+original
+uploads
+*.jpg
+*.png
 
 # Editor directories and files
 .vscode

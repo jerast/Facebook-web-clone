@@ -1,0 +1,53 @@
+@hostname = 192.168.0.13
+@port = {{$dotenv FACEBOOK_WEB_CLONE_PORT}}
+@url = http://{{hostname}}:{{port}}/api
+@userId = 66b43b8cc9bc26cd4c02b491
+
+
+### User create
+POST {{url}}/users
+Content-Type: application/json
+
+{
+  "firstName": "José",
+  "lastName": "Rodríguez",
+  "email": "jose@outlook.com",
+  "password": "12345678"
+}
+
+
+### User update with No data
+PUT {{url}}/users/{{userId}}
+Content-Type: application/json
+
+
+### User update data
+PUT {{url}}/users/{{userId}}
+Content-Type: application/json
+
+# { "username": "jose.romero.9602" }
+{ "lastName": "Romero" }
+
+
+### User update profile picture
+PUT {{url}}/users/{{userId}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="profile"; filename="profile.jpg"
+Content-Type: image/jpeg
+
+< ./profile.jpg
+--boundary--
+
+
+### User update cover picture
+PUT {{url}}/users/{{userId}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="cover"; filename="cover.jpg"
+Content-Type: image/jpeg
+
+< ./cover.jpg
+--boundary--
