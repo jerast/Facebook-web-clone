@@ -11,7 +11,7 @@ const userSchema = Schema({
   },
   username: {
     type: String,
-    required: true
+    unique: true
   },
   email: {
     type: String,
@@ -22,15 +22,11 @@ const userSchema = Schema({
     type: String,
     required: true
   },
-  pictures: {
-    profile: {
-      type: String,
-      default: null,
-    },
-    cover: {
-      type: String,
-      default: null,
-    },
+  profile: {
+    type: String,
+  },
+  cover: {
+    type: String,
   },
   friends: [{
     type: Schema.Types.ObjectId,
@@ -43,6 +39,17 @@ const userSchema = Schema({
 }, {
   timestamps: true,
   toJSON: {
+    transform: (doc, ret) => {
+      ret.id = ret._id.toString()
+      delete ret._id
+      delete ret.__v
+      delete ret.createdAt
+      delete ret.updatedAt
+      delete ret.password
+      return ret
+    }
+  },
+  toObject: {
     transform: (doc, ret) => {
       ret.id = ret._id.toString()
       delete ret._id
