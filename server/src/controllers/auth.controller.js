@@ -4,14 +4,14 @@ import userValidator from '#validators/user.validator.js'
 export default class AuthController {
 
   static loginUser = async (req, res) => {
-    const validate = userValidator.partial(req.body)
+    const { user, password } = req.body
 
-    if (validate.error) return res.status(422).json({
-      ok: false,
-      error: validate.error.issues
-    })
+    // if (validate.error) return res.status(422).json({
+    //   ok: false,
+    //   error: validate.error.issues
+    // })
 
-    const result = await AuthModel.loginUser(validate.data)
+    const result = await AuthModel.loginUser({ user, password })
     
     return res.status(result.ok ? 200 : 404).json(result)
   }

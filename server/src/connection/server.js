@@ -41,6 +41,7 @@ export class Server {
   }
 
   #routes () {
+    this.#app.use( '/api/auth', authRoutes )
     this.#app.use( '/api/users', usersRoutes )
   }
 

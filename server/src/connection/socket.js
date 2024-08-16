@@ -13,16 +13,18 @@ export class Socket {
     this.#io.on('connection', async (socket) => {
 
       this.#connected(socket)
-      socket.on('disconnect', this.#disconnected)
+      socket.on('disconnect', () => this.#disconnected(socket.id))
 
     })
   }
 
   #connected (socket) {
+    console.log(socket.id, 'connected')
     socket.emit('connected')
   }
 
-  #disconnected () {
+  #disconnected (socketId) {
+    console.log(socketId, 'disconnected')
   }
 
 }

@@ -4,30 +4,29 @@ import { generateJWT } from '#jwt/jwt.js'
 
 export default class AuthModel {
 
-  static loginUser = async ({ email, username, password }) => {
+  static loginUser = async ({ user, password }) => {
     try {
-      const user = await User.findOne({ $or: [{ email }, { username }] }) // validate email / username
-      if ( !user ) return {
+      const userDB = await User.findOne({ $or: [{ email: user }, { username: user }] }) // validate email / username
+      if ( !userDB ) return {
         ok: false,
         error: 'User / Password are not correct.',
       }
 
-      const validPassword = bcrypt.compareSync( password, user.password ) // validate password
+      const validPassword = bcrypt.compareSync( password, userDB.password ) // validate password
       if ( !validPassword ) return {
         ok: false,
         error: 'Email / Password are not correct.',
       }
 
-      const token = await generateJWT({ uid: user.id }) // generate token
+      const token = await generateJWT({ uid: userDB.id }) // generate token
 
       return { 
         ok: true,
-        user,
+        user: userDB,
         token
       }
     } 
     catch (error) {
-      console.log(error)
       return {
         ok: false,
         error: 'Something was wrong'
