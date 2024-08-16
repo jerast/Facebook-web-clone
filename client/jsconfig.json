@@ -3,8 +3,14 @@
 		"baseUrl": "./",
 		"paths": {
       "@app/*": ["src/app/*"],
-      "@config/*": ["src/config/*"],
+      "@store/*": ["src/app/store/*"],
+      "@auth/*": ["src/features/auth/*"],
+      "@chat/*": ["src/features/chat/*"],
+      "@friends/*": ["src/features/friends/*"],
+      "@posts/*": ["src/features/posts/*"],
+      "@users/*": ["src/features/users/*"],
+      "@shared/*": ["src/shared/*"],
 		},
 	},
-	"exclude": ["node_modules", "dist", "original"]
+	"exclude": ["node_modules", "dist", "templates"]
 }

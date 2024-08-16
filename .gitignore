@@ -9,7 +9,7 @@ node_modules
 dist
 docs
 original
-uploads
+templates
 *.jpg
 *.png
 

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+	/* Generals */
+
+	* {
+		@apply select-none font-sans;
+	}
+
+	#root {
+		@apply relative h-screen text-gray-800;
+	}
+}
