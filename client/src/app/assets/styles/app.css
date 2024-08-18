@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 @layer components {
-  .main {
-    @apply h-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5]
+  .main-container {
+    @apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5]
+  }
+
+  .main-header {
+    @apply col-start-1 col-end-4
   }
 
   
   .navbar {
-    @apply col-start-1 col-end-4 h-14 flex justify-between bg-white shadow-md shadow-gray-300
+    @apply h-14 flex justify-between bg-white shadow-md shadow-gray-300
   }
   .navbar__start {
     @apply w-80 py-2 px-4 flex gap-2
@@ -55,38 +59,45 @@
   }
 
 
-  .apps {
-    @apply w-[360px] h-full grid grid-flow-dense overflow-y-auto py-4 px-2 grid-rows-[min-content_min-content_1fr]
+  .sidebar {
+    @apply w-[360px] h-full grid grid-flow-dense overflow-y-auto pt-4 pb-3 px-2 grid-rows-[min-content_min-content_1fr]
   }
-  .apps__item {
-    @apply h-12 flex px-2 py-[6px] gap-3 items-center hover:bg-[#E4E6EB] rounded-lg text-sm cursor-pointer
+  .sidebar__profile-link,
+  .sidebar__item,
+  .sidebar__button {
+    @apply w-full h-12 flex px-2 py-[6px] gap-3 items-center hover:bg-[#E4E6EB] rounded-lg text-sm cursor-pointer
   }
-  .apps__item img {
+  .sidebar__profile-picture,
+  .sidebar__item-img,
+  .sidebar__button-icon {
     @apply h-full aspect-square
   }
-  .apps__item--user a {
-    @apply h-full w-full flex gap-3 items-center
-  }
-  .apps__item--user img {
+  .sidebar__profile-picture,
+  .sidebar__button-icon {
     @apply rounded-full
   }
-  .apps__item--app img {
+  .sidebar__item-img {
     @apply object-none
   }
-  .apps__item--button svg {
-    @apply h-full aspect-square rounded-full bg-[#E4E6EB] p-2
+  .sidebar__button-icon {
+    @apply bg-[#E4E6EB] p-2
   }
-  .apps__item--button-up svg {
-    @apply rotate-180
-  }
-  .apps__item--button:hover svg {
+  .sidebar__button:hover .sidebar__button-icon {
     @apply bg-[#DADDE1]
   }
-  .apps__hr {
+  .sidebar__button[open] .sidebar__button-icon {
+    @apply rotate-180
+  }
+
+  
+  .sidebar__hr {
     @apply m-2 px-2 border-[#CED0D4]
   }
-  .apps__footer {
-    @apply px-2 text-[12px] leading-4 block h-fit text-[#65676B] self-end
+  .sidebar__footer {
+    @apply mx-2 leading-4 block h-fit self-end
+  }
+  .sidebar__footer-copyright {
+    @apply text-[12px] text-[#65676B] mt-auto h-full
   }
 
 

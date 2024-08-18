@@ -1,13 +1,15 @@
 import { Navbar } from '@shared/components/Navbar'
 import { Contacts } from '@shared/components/Contacts'
-import { AppsSidebar } from '@shared/components/AppsSidebar'
+import { Sidebar } from '@shared/components/Sidebar'
 
 export const MainLayout = ({ children }) => 
-  <main className="main">
-    <Navbar />
-    <AppsSidebar />
-    <section className="content">
+  <div className="main-container">
+    <header className="main-header">
+      <Navbar />
+    </header>
+    <Sidebar />
+    <main className="main-content">
       { children }
-    </section>
+    </main>
     <Contacts />
-  </main>
+  </div>
