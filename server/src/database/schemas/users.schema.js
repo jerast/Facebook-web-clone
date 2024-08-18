@@ -23,10 +23,20 @@ const userSchema = Schema({
     required: true
   },
   profile: {
-    type: String,
+    public_id: {
+      type: String,
+    },
+    version: {
+			type: Number,
+		},
   },
   cover: {
-    type: String,
+    public_id: {
+      type: String,
+    },
+    version: {
+			type: Number,
+		},
   },
   friends: [{
     type: Schema.Types.ObjectId,
@@ -41,6 +51,8 @@ const userSchema = Schema({
   toJSON: {
     transform: (doc, ret) => {
       ret.id = ret._id.toString()
+      ret.profile =  ret.profile ? `v${ret.profile.version}/${ret.profile.public_id}` : undefined
+      ret.cover =  ret.cover ? `v${ret.cover.version}/${ret.cover.public_id}` : undefined
       delete ret._id
       delete ret.__v
       delete ret.createdAt
