@@ -55,6 +55,41 @@
   }
 
 
+  .apps {
+    @apply w-[360px] h-full grid grid-flow-dense overflow-y-auto py-4 px-2 grid-rows-[min-content_min-content_1fr]
+  }
+  .apps__item {
+    @apply h-12 flex px-2 py-[6px] gap-3 items-center hover:bg-[#E4E6EB] rounded-lg text-sm cursor-pointer
+  }
+  .apps__item img {
+    @apply h-full aspect-square
+  }
+  .apps__item--user a {
+    @apply h-full w-full flex gap-3 items-center
+  }
+  .apps__item--user img {
+    @apply rounded-full
+  }
+  .apps__item--app img {
+    @apply object-none
+  }
+  .apps__item--button svg {
+    @apply h-full aspect-square rounded-full bg-[#E4E6EB] p-2
+  }
+  .apps__item--button-up svg {
+    @apply rotate-180
+  }
+  .apps__item--button:hover svg {
+    @apply bg-[#DADDE1]
+  }
+  .apps__hr {
+    @apply m-2 px-2 border-[#CED0D4]
+  }
+  .apps__footer {
+    @apply px-2 text-[12px] leading-4 block h-fit text-[#65676B] self-end
+  }
+
+
   .contacts {
     @apply w-[360px]
   }
