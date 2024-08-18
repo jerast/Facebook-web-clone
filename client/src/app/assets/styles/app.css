@@ -3,5 +3,59 @@
 @tailwind utilities;
 
 @layer components {
+  .main {
+    @apply h-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5]
+  }
 
+  
+  .navbar {
+    @apply col-start-1 col-end-4 h-14 flex justify-between bg-white shadow-md shadow-gray-300
+  }
+  .navbar__start {
+    @apply w-80 py-2 px-4 flex gap-2
+  }
+  .navbar__icon {
+    @apply h-10 w-10 fill-primary
+  }
+  .navbar__search {
+    @apply h-10 flex grow items-center gap-2 px-3 bg-[#f0f2f5] rounded-full 
+  }
+  .navbar__search-icon {
+    @apply h-4 fill-[#65676B]
+  }
+  .navbar__search-input {
+    @apply bg-transparent text-[15px] pb-[2px] border-none focus:outline-none /* #65676B */
+  }
+  .navbar__items {
+    @apply w-[680px] h-full flex gap-2
+  }
+  .navbar__items li {
+    @apply mx-[2px] my-1 grow flex items-center justify-center rounded-lg hover:bg-[#f0f2f5] relative hover:cursor-pointer
+  }
+  .navbar__items li.active {
+    @apply hover:bg-white after:w-full after:h-[3px] after:content-[''] after:absolute after:-bottom-1 after:bg-primary
+  }
+  .navbar__items li svg {
+    @apply h-6 w-6 fill-[#65676B]
+  }
+  .navbar__items li.active svg {
+    @apply fill-primary
+  }
+  .navbar__buttons {
+    @apply w-80 flex justify-end gap-2 py-2 px-4
+  }
+  .navbar__buttons button {
+    @apply h-10 w-10 flex bg-[#E4E6EB] hover:bg-[#DADDE1] rounded-full overflow-hidden
+  }
+  .navbar__buttons button:hover img{
+    @apply filter brightness-95
+  }
+  .navbar__buttons svg{
+    @apply h-5 w-5 m-auto
+  }
+
+
+  .contacts {
+    @apply w-[360px]
+  }
 }
