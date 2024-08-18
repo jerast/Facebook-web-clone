@@ -62,7 +62,7 @@ export const Sidebar = () => {
       <hr className="sidebar__hr" />
       
       <footer className="sidebar__footer">
-        <span className="sidebar__footer-copyright">Privacy · Terms · Advertising · Ad Choices · Cookies · More · Meta © 2024</span>
+        <span className="sidebar__footer-copyright">Facebook Web Clone © 2024 · Jerast</span>
       </footer>
     </aside>
   )

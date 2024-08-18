@@ -4,11 +4,11 @@ import { Sidebar } from '@shared/components/Sidebar'
 
 export const MainLayout = ({ children }) => 
   <div className="main-container">
-    <header className="main-header">
+    <header className="header">
       <Navbar />
     </header>
     <Sidebar />
-    <main className="main-content">
+    <main className="content">
       { children }
     </main>
     <Contacts />
