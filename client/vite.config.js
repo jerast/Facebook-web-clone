@@ -17,6 +17,7 @@ export default defineConfig({
 			'@app': resolver('./src/app'),
 			'@store': resolver('./src/app/store'),
       '@auth': resolver('./src/features/auth'),
+      '@stories': resolver('./src/features/stories'),
       '@chat': resolver('./src/features/chat'),
       '@friends': resolver('./src/features/friends'),
       '@posts': resolver('./src/features/posts'),

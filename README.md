@@ -9,12 +9,12 @@ The goal of this project is to replicate the main functionalities of Facebook, i
 ## Features
 
 - [X] User Authentication
-- [ ] News Feed
 - [ ] User Profiles
+- [ ] News Feed
 - [ ] Friends System
 - [ ] Posting and Commenting
 - [ ] Real-time Messaging
-- [ ] History Feed
+- [ ] Stories Feed
 
 ## Objectives
 
@@ -29,13 +29,15 @@ The goal of this project is to replicate the main functionalities of Facebook, i
   - [X] Add JWT for secure authentication
   - [X] Set up Socket.io for real-time communication
   
+  **User Profiles**
+  - [X] Create user profile model
+  - [X] Develop profile creation and editing functionality
+  - [ ] Display user profile design
+  
   **News Feed**
   - [ ] Design news feed schema
+  - [ ] Develop news endpoints functions and socket events
   - [ ] Implement news feed displaying posts from friends
-  
-  **User Profiles**
-  - [ ] Create user profile model
-  - [ ] Develop profile creation and editing functionality
   
   **Friends System**
   - [ ] Develop friend request functionality
@@ -52,10 +54,10 @@ The goal of this project is to replicate the main functionalities of Facebook, i
   - [ ] Messaging between users
   - [ ] Implement group chats
 
-  **History Feed**
-  - [ ] Design history upload feature
-  - [ ] Caroussel view on Main page
-  - [ ] Individual galery view for histories
+  **Stories Feed**
+  - [X] Caroussel stories view on Main page
+  - [ ] Design story upload feature
+  - [ ] Individual galery view for stories
 
 ## Technologies Used
 

@@ -1,7 +1,7 @@
-@hostname = 192.168.0.13
+@hostname = localhost
 @port = {{$dotenv FACEBOOK_WEB_CLONE_PORT}}
 @url = http://{{hostname}}:{{port}}/api
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NmI0M2I4Y2M5YmMyNmNkNGMwMmI0OTEiLCJpYXQiOjE3MjMwODk4MTUsImV4cCI6MTcyMzY5NDYxNX0.MJ2wmDAYrQvYihryG4ReN4rY6l-lnjd1tmLQtVd0I_o
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NmI0M2I4Y2M5YmMyNmNkNGMwMmI0OTEiLCJpYXQiOjE3MjM3NTQwNDcsImV4cCI6MTcyNDM1ODg0N30.hrtg_CgN5aZi3QBjsspdMp7wXVnompKf2ibuo-J_7Nk
 
 
 ### Auth user login (email)
@@ -9,7 +9,7 @@ POST {{url}}/auth/login
 Content-Type: application/json
 
 {
-  "email": "jose@outlook.com",
+  "user": "aura@gmail.com",
   "password": "12345678"
 }
 
@@ -19,7 +19,7 @@ POST {{url}}/auth/login
 Content-Type: application/json
 
 {
-  "username": "jose.romero.9602",
+  "user": "jose.romero.9602",
   "password": "12345678"
 }
 

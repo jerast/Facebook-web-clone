@@ -4,14 +4,12 @@
 
 @layer components {
   .main-container {
-    @apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5]
+    @apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5] relative
   }
 
   .header {
     @apply col-start-1 col-end-4 z-10
   }
-
-  
   .navbar {
     @apply h-14 flex justify-between bg-white shadow-md shadow-gray-300
   }
@@ -60,7 +58,7 @@
 
 
   .sidebar {
-    @apply w-[360px] h-full grid grid-flow-dense overflow-y-auto pt-4 pb-3 px-2 grid-rows-[min-content_min-content_1fr]
+    @apply col-start-1 col-end-2 w-[360px] h-full grid grid-flow-dense overflow-y-auto pt-4 pb-3 px-2 grid-rows-[min-content_min-content_1fr]
   }
   .sidebar__profile-link,
   .sidebar__item,
@@ -96,7 +94,7 @@
 
 
   .contacts {
-    @apply w-[360px] h-full overflow-y-auto px-2 py-[17px]
+    @apply col-start-3 col-end-4 w-[360px] h-full overflow-y-auto px-2 py-[17px]
   }
   .contacts__header {
     @apply w-full h-9 flex justify-between items-center
@@ -118,5 +116,53 @@
   }
   .contacts-item__profile-picture {
     @apply h-full aspect-square rounded-full
+  }
+
+
+  .content {
+    @apply w-[680px] mt-14 pt-6 absolute justify-self-center overflow-x-hidden
+  }
+
+
+  .story-view {
+    @apply w-full h-[260px] pb-[10px] flex gap-2 overflow-x-auto
+  }
+  .story-button,
+  .story-card {
+    @apply w-[140.6px] min-w-[140.6px] h-full flex flex-col items-center bg-white rounded-xl overflow-hidden shadow-story hover:brightness-95
+  }
+
+  .story-button__img {
+    @apply h-[202px] object-cover self-start
+  }
+  .story-button__div {
+    @apply relative w-full flex grow justify-center p-[6px]
+  }
+  .story-button__icon {
+    @apply w-10 p-1 bg-primary fill-white rounded-full border-4 border-white absolute top-[-20px]
+  }
+  .story-button__text {
+    @apply text-xs font-semibold self-end
+  }
+  .story-card {
+    @apply relative cursor-pointer
+  }
+  .story-card__user{
+    @apply w-full h-full flex flex-col absolute z-10 justify-between
+  }
+  .story-card__user-profile {
+    @apply h-10 w-10 m-3 border-4 rounded-full border-primary
+  }
+  .story-card--viewed .story-card__user-profile {
+    @apply border-white
+  }
+  .story-card__user-name {
+    @apply mx-3 my-[7px] text-xs font-semibold text-white
+  }
+  .story-card__backdrop {
+    @apply absolute h-full w-full bg-story
+  }
+  .story-card__img {
+    @apply h-full object-cover object-center
   }
 }

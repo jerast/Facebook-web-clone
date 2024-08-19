@@ -8,10 +8,16 @@
 POST {{url}}/users
 Content-Type: application/json
 
+# {
+#   "firstName": "José",
+#   "lastName": "Rodríguez",
+#   "email": "jose@outlook.com",
+#   "password": "12345678"
+# }
 {
-  "firstName": "José",
-  "lastName": "Rodríguez",
-  "email": "jose@outlook.com",
+  "firstName": "Aura",
+  "lastName": "Castro",
+  "email": "aura@gmail.com",
   "password": "12345678"
 }
 

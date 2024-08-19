@@ -23,4 +23,14 @@
 	#root {
 		@apply relative h-screen text-gray-800;
 	}
+
+  * {
+    -ms-overflow-style: none;  /* IE y Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Ocultar scroll para WebKit browsers (Chrome, Safari, etc.) */
+  *::-webkit-scrollbar {
+    display: none;
+  }
 }

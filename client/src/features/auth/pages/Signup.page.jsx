@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '@app/hooks/useAuth'
 import { useForm } from '@app/hooks/useForm'
 import { title } from '@shared/utils/title'
+import { useEffect } from 'react'
 
 const SignUpFormInit = {
   firstName: 'Aura',
@@ -22,7 +23,9 @@ export const SignupPage = () => {
     result.ok && navigate('/login')
   }
 
-  title('Sign Up for Facebook')
+  useEffect(() => {
+    title('Sign Up for Facebook')
+  }, [])
 
   return (
     <form 
