@@ -7,53 +7,57 @@
     @apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5] relative
   }
 
+
   .header {
-    @apply col-start-1 col-end-4 z-10
+    @apply col-start-1 col-end-4 h-14 z-10 flex justify-between bg-white shadow-md shadow-gray-300
   }
-  .navbar {
-    @apply h-14 flex justify-between bg-white shadow-md shadow-gray-300
-  }
-  .navbar__start {
+  .header-start {
     @apply w-80 py-2 px-4 flex gap-2
   }
-  .navbar__start-icon {
+  .header-start__icon {
     @apply h-10 w-10 fill-primary
   }
-  .navbar__start-search {
+  .header-start__search {
     @apply h-10 flex grow items-center gap-2 px-3 bg-[#f0f2f5] rounded-full 
   }
-  .navbar__start-search-icon {
+  .header-start__search-icon {
     @apply h-4 fill-[#65676B]
   }
-  .navbar__start-search-input {
+  .header-start__search-input {
     @apply bg-transparent text-[15px] pb-[2px] border-none focus:outline-none /* #65676B */
   }
-  .navbar__items {
-    @apply w-[680px] h-full flex gap-2
-  }
-  .navbar__items li {
-    @apply mx-[2px] my-1 grow flex items-center justify-center rounded-lg hover:bg-[#f0f2f5] relative hover:cursor-pointer
-  }
-  .navbar__items li.active {
-    @apply hover:bg-white after:w-full after:h-[3px] after:absolute after:-bottom-1 after:bg-primary
-  }
-  .navbar__items li svg {
-    @apply h-6 w-6 fill-[#65676B]
-  }
-  .navbar__items li.active svg {
-    @apply fill-primary
-  }
-  .navbar__actions {
+  .header-actions {
     @apply w-80 flex justify-end gap-2 py-2 px-4
   }
-  .navbar__actions button {
-    @apply h-10 w-10 flex bg-[#E4E6EB] hover:bg-[#DADDE1] rounded-full overflow-hidden
+  .header-actions__button,
+  .header-actions__user {
+    @apply h-10 w-10 flex rounded-full overflow-hidden bg-[#E4E6EB] hover:bg-[#DADDE1]
   }
-  .navbar__actions button:hover img{
-    @apply filter brightness-95
+  .header-actions__user {
+    @apply hover:brightness-95
   }
-  .navbar__actions svg{
+  .header-actions__button-icon {
     @apply h-5 w-5 m-auto
+  }
+
+
+  .navbar {
+    @apply w-[680px]
+  }
+  .navbar__list {
+    @apply h-full flex gap-2
+  }
+  .navbar__item {
+    @apply mx-[2px] my-1 grow flex items-center justify-center rounded-lg hover:bg-[#f0f2f5] relative hover:cursor-pointer
+  }
+  .navbar__item-icon {
+    @apply h-6 w-6 fill-[#65676B]
+  }
+  .navbar__item--active {
+    @apply hover:bg-white after:w-full after:h-[3px] after:absolute after:-bottom-1 after:bg-primary
+  }
+  .navbar__item--active .navbar__item-icon {
+    @apply fill-primary
   }
 
 
@@ -120,7 +124,7 @@
 
 
   .content {
-    @apply w-[680px] mt-14 pt-6 absolute justify-self-center overflow-x-hidden
+    @apply w-[680px] mt-14 pt-6 absolute justify-self-center
   }
 
 
@@ -131,12 +135,11 @@
   .story-card {
     @apply w-[140.6px] min-w-[140.6px] h-full flex flex-col items-center bg-white rounded-xl overflow-hidden shadow-story hover:brightness-95
   }
-
   .story-button__img {
     @apply h-[202px] object-cover self-start
   }
   .story-button__div {
-    @apply relative w-full flex grow justify-center p-[6px]
+    @apply relative w-full flex grow justify-center p-[7px]
   }
   .story-button__icon {
     @apply w-10 p-1 bg-primary fill-white rounded-full border-4 border-white absolute top-[-20px]
