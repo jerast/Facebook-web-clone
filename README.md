@@ -8,32 +8,34 @@ The goal of this project is to replicate the main functionalities of Facebook, i
 
 ## Features
 
-- [ ] User Authentication
-- [ ] User Profiles
+- [X] User Authentication
 - [ ] News Feed
+- [ ] User Profiles
 - [ ] Friends System
 - [ ] Posting and Commenting
 - [ ] Real-time Messaging
+- [ ] History Feed
 
 ## Objectives
 
   **Initial Setup**
   - [x] Set up the development environment
-  - [ ] Init server environment
-  - [ ] Database config and design
+  - [X] Init server environment
+  - [X] Database config and design
   
   **User Authentication**
-  - [ ] Implement user registration
-  - [ ] Implement user login
-  - [ ] Add JWT for secure authentication
-  
-  **User Profiles**
-  - [ ] Create user profile model
-  - [ ] Develop profile creation and editing functionality
+  - [X] Implement user registration
+  - [X] Implement user login
+  - [X] Add JWT for secure authentication
+  - [X] Set up Socket.io for real-time communication
   
   **News Feed**
   - [ ] Design news feed schema
   - [ ] Implement news feed displaying posts from friends
+  
+  **User Profiles**
+  - [ ] Create user profile model
+  - [ ] Develop profile creation and editing functionality
   
   **Friends System**
   - [ ] Develop friend request functionality
@@ -46,9 +48,14 @@ The goal of this project is to replicate the main functionalities of Facebook, i
   - [ ] Design UI for posts and comments
   
   **Real-time Messaging**
-  - [ ] Set up Socket.io for real-time communication
-  - [ ] Implement messaging between users
   - [ ] Create UI for messaging
+  - [ ] Messaging between users
+  - [ ] Implement group chats
+
+  **History Feed**
+  - [ ] Design history upload feature
+  - [ ] Caroussel view on Main page
+  - [ ] Individual galery view for histories
 
 ## Technologies Used
 
