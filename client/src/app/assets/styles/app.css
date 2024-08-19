@@ -8,7 +8,7 @@
   }
 
   .header {
-    @apply col-start-1 col-end-4
+    @apply col-start-1 col-end-4 z-10
   }
 
   
@@ -96,6 +96,27 @@
 
 
   .contacts {
-    @apply w-[360px]
+    @apply w-[360px] h-full overflow-y-auto px-2 py-[17px]
+  }
+  .contacts__header {
+    @apply w-full h-9 flex justify-between items-center
+  }
+  .contacts__header-text {
+    @apply pl-2 font-semibold text-[#65676B]
+  }
+  .contacts__header-button {
+    @apply h-9 w-9 rounded-full hover:bg-[#E4E6EB]
+  }
+  .contacts__header-button-icon {
+    @apply fill-[#65676B] h-5 w-5 m-auto
+  }
+  .contacts-item {
+    @apply w-full h-12 flex px-2 py-[6px] gap-3 items-center relative hover:bg-[#E4E6EB] rounded-lg text-sm cursor-pointer 
+  }
+  .contacts-item--online {
+    @apply after:left-[33px] after:top-[31px] after:w-2 after:h-2 after:rounded-full after:border-2 after:border-[#f0f2f5] after:box-content after:absolute after:bottom-[8px] after:bg-[#31a24c]
+  }
+  .contacts-item__profile-picture {
+    @apply h-full aspect-square rounded-full
   }
 }
