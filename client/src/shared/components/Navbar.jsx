@@ -12,7 +12,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <ul className="navbar__list">
         <li className="navbar__item navbar__item--active">
-          <Link to="/">
+          <Link className="navbar__item-link" to="/">
             <NavHomeIcon className="navbar__item-icon" />
           </Link>
         </li>

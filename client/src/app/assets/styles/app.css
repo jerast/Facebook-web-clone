@@ -59,6 +59,9 @@
   .navbar__item--active .navbar__item-icon {
     @apply fill-primary
   }
+  .navbar__item-link {
+    @apply w-full h-full flex justify-center items-center
+  }
 
 
   .sidebar {
