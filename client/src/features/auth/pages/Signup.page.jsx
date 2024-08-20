@@ -15,6 +15,10 @@ export const SignupPage = () => {
   const navigate = useNavigate()
   const { signUp } = useAuth()
   const { form, isLoading, onChangeForm,  onSubmitForm } = useForm(SignUpFormInit)
+
+  useEffect(() => {
+    title('Sign Up for Facebook')
+  }, [])
   
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -22,10 +26,6 @@ export const SignupPage = () => {
     const result = await onSubmitForm( signUp )
     result.ok && navigate('/login')
   }
-
-  useEffect(() => {
-    title('Sign Up for Facebook')
-  }, [])
 
   return (
     <form 
@@ -44,6 +44,7 @@ export const SignupPage = () => {
           className="signup-form__input"
           value={form.firstName}
           onChange={onChangeForm}
+          autoComplete="off"
         />
         <input 
           type="text"
@@ -52,6 +53,7 @@ export const SignupPage = () => {
           className="signup-form__input"
           value={form.lastName}
           onChange={onChangeForm}
+          autoComplete="off"
         />
         <input 
           type="email"
@@ -60,6 +62,7 @@ export const SignupPage = () => {
           className="signup-form__input"
           value={form.email}
           onChange={onChangeForm}
+          autoComplete="off"
         />
         <input 
           type="password" 
@@ -68,6 +71,7 @@ export const SignupPage = () => {
           className="signup-form__input"
           value={form.password}
           onChange={onChangeForm}
+          autoComplete="off"
         />
       </div>
       <div className="signup-form__abbeas-data">

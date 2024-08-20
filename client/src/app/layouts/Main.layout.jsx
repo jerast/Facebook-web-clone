@@ -1,4 +1,3 @@
-import { Navbar } from '@shared/components/Navbar'
 import { Contacts } from '@shared/components/Contacts'
 import { Sidebar } from '@shared/components/Sidebar'
 import { Header } from '@shared/components/Header'

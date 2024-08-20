@@ -5,7 +5,7 @@ import { title } from '@shared/utils/title'
 import { useEffect } from 'react'
 
 const loginFormInit = {
-  user: 'jose.romero.9602',
+  user: 'lintorvalds',
   password: '12345678'
 }
 
@@ -14,15 +14,16 @@ export const LoginPage = () => {
   const { logIn } = useAuth()
   const { form, isLoading, onChangeForm,  onSubmitForm } = useForm(loginFormInit)
   
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    const result = await onSubmitForm( logIn )
-    result.ok && navigate('/')
-  }
-
   useEffect(() => {
     title('Log into Facebook')
   }, [])
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    
+    const result = await onSubmitForm( logIn )
+    result.ok && navigate('/')
+  }
 
   return (
     <form 
@@ -37,6 +38,7 @@ export const LoginPage = () => {
         className="login-form__input"
         value={form.user}
         onChange={onChangeForm}
+        autoComplete="off"
       />
       <input 
         type="password" 
@@ -45,6 +47,7 @@ export const LoginPage = () => {
         className="login-form__input"
         value={form.password}
         onChange={onChangeForm}
+        autoComplete="off"
       />
       <button
         type="submit"

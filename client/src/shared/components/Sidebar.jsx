@@ -19,7 +19,7 @@ export const Sidebar = () => {
       <section className="sidebar__profile">
         <Link 
           className="sidebar__profile-link" 
-          to={`user/${user.username}`}
+          to={`/${user.username}`}
         >
           <img 
             className="sidebar__profile-picture" 

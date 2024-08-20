@@ -1,15 +1,17 @@
 import { Route, Routes } from 'react-router-dom'
-import { MainLayout } from '@app/layouts/Main.layout'
 import { HomePage } from '@app/pages/Home.page'
 import { UserPage } from '@users/pages/User.page'
-import { NotFoundPage } from '@shared/components/NotFound.page'
+import { PostPage } from '@posts/pages/Post.page'
+import { StoryPage } from '@stories/pages/Story.page'
+import { NotFoundPage } from '@app/pages/NotFound.page'
 
 export const AppRoutes = () => 
-  <MainLayout>
-    <Routes>
-      <Route path="/" Component={ HomePage } />
-      <Route path="/user/:id" Component={ UserPage } />
+  <Routes>
+    <Route path="/" element={ <HomePage /> } />
+    <Route path="/story/:id" element={ <StoryPage /> } />
+    <Route path="/post/:id" element={ <PostPage /> } />
+    <Route path="/:id" element={ <UserPage /> } />
 
-      <Route path="*" Component={ NotFoundPage } />
-    </Routes>
-  </MainLayout> 
+    <Route path="*" element={ <NotFoundPage /> } />
+  </Routes>
+  

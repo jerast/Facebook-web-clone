@@ -12,6 +12,9 @@ export default defineConfig({
     react(), 
     svgr(),
   ],
+  build: {
+    sourcemap: false,  // Desactiva los source maps
+  },
   resolve: {
 		alias: {
 			'@app': resolver('./src/app'),

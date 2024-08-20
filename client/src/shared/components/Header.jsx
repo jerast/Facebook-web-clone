@@ -14,6 +14,7 @@ export const Header = () => {
 
   return (
     <header className="header">
+
       <div className="header-start">
         <Link to="/">
           <FbIcon className="header-start__icon" />
@@ -44,6 +45,7 @@ export const Header = () => {
           />
         </button>
       </div>
+      
     </header>
   )
 }

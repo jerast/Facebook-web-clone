@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily:{
         'sans': ['Helvetica', 'Arial', 'sans-serif'],
-        'symbols': ['popular-symbols']
+        'symbols': ['popular-symbols', 'lite-glyphs-filled']
       },
       colors: {
         'primary': '#0866FF',

@@ -25,8 +25,9 @@ export const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          { status === 'auth' && <Route path="/*" Component={ AppRoutes }/> }
-          { status === 'no-auth' && <Route path="/*" Component={ AuthRoutes }/> }
+          { status === 'checking' && <Route path="/*" element={ <></> }/> }
+          { status === 'auth' && <Route path="/*" element={ <AppRoutes /> }/> }
+          { status === 'no-auth' && <Route path="/*" element={ <AuthRoutes /> }/> }
         </Routes>
       </BrowserRouter>
     </>
