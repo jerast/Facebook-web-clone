@@ -7,7 +7,7 @@ export const NewPostCard = () => {
 
   return (
     <section className="new-post-card">
-      <Link to={`/user/${user.username}`}>
+      <Link to={`/${user.username}`}>
         <img 
           className="new-post-card__profile"
           src={image(user.profile, 40)} 

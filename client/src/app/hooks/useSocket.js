@@ -1,43 +1,36 @@
-import { useEffect, useCallback } from 'react'
-import { useAuthStore } from '@app/store/auth.store'
-import { useAppStore } from '@app/store/app.store'
+import { useEffect, useCallback, useState } from 'react'
 import { socket as SocketIo } from '@shared/server/socket'
 
 export const useSocket = () => {
-  const { status } = useAuthStore()
-  const { socket, setSocket, clearSocket, appConnected, appDisconnected } = useAppStore()
+  const [ socket, setSocket ] = useState(null)
 
   const connected = useCallback(() => {
     if (socket) return
 
     const token = localStorage.getItem('facebook-clone-token')
-    setSocket( SocketIo({ 'x-token': token }).connect() )
-    appConnected()
+    const newSocket = SocketIo({ 'x-token': token }).connect()
+    setSocket( newSocket )
   }, [])
   
   const disconnected = useCallback(() => {
+    if (!socket) return
+
     socket?.disconnect()
-    clearSocket()
-    appDisconnected(false)
+    setSocket(null)
   }, [])
   
   useEffect(() => {
-    socket?.on('connect', appConnected)
-    socket?.on('disconnect', appDisconnected)
+    socket?.on('connect', () => console.log('online'))
+    socket?.on('disconnect', () => console.log('offline'))
     
-    return () => {
-      socket?.off('connect')
-      socket?.off('disconnect')
+    return () => { 
+      socket?.off('connect') 
+      socket?.off('disconnect') 
     }
   }, [socket])
 
-  useEffect(() => {
-    status === 'auth'
-      ? connected()
-      : disconnected()
-  }, [status])
-
   return {
-    
+    connected,
+    disconnected,
   }
 }

@@ -3,6 +3,8 @@ export const ALLOWED_IPS = [
   'http://192.168.0.13:8172',
   'http://localhost:5173',
   'http://192.168.0.13:5173',
+  'http://localhost:8080',
+  'http://192.168.0.13:8080',
 ]
 
 export const CLOUDINARY_FOLDERS = {

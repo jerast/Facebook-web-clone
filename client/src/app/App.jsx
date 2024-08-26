@@ -2,32 +2,35 @@ import { useLayoutEffect } from 'react'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import { useAuth } from '@app/hooks/useAuth'
-import { useSocket } from '@app/hooks/useSocket'
 
 import { AppRoutes } from '@app/routes/App.routes'
 import { AuthRoutes } from '@app/routes/Auth.routes'
 import { useAuthStore } from '@store/auth.store'
 
-import '@app/assets/styles/config.css'
-import '@app/assets/styles/app.css'
-import '@app/assets/styles/auth.css'
-
 export const App = () => {
   const { status } = useAuthStore()
   const { verifyToken } = useAuth()
-  useSocket()
 
   useLayoutEffect(() => { 
     verifyToken()
   }, [])
-  
+
+  const appRouter = () => {
+    switch (status) {
+      case 'auth': 
+        return <Route path="*" element={ <AppRoutes /> }/>
+      case 'no-auth': 
+        return <Route path="*" element={ <AuthRoutes /> }/>
+      default: 
+        return <Route path="*" element={ <></> }/>
+    }
+  }
+
   return ( 
     <>
       <BrowserRouter>
         <Routes>
-          { status === 'checking' && <Route path="/*" element={ <></> }/> }
-          { status === 'auth' && <Route path="/*" element={ <AppRoutes /> }/> }
-          { status === 'no-auth' && <Route path="/*" element={ <AuthRoutes /> }/> }
+          { appRouter() }
         </Routes>
       </BrowserRouter>
     </>

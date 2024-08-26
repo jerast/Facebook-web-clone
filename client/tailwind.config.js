@@ -6,16 +6,27 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         'sans': ['Helvetica', 'Arial', 'sans-serif'],
         'symbols': ['popular-symbols', 'lite-glyphs-filled']
+      },
+      borderRadius: {
+        'box': '1.25rem'
       },
       colors: {
         'primary': '#0866FF',
         'primary-hover': '#1877f2',
         'success': '#00a400',
         'success-hover': '#36a420',
-        'inactive': '#65676B'
+        'inactive': '#65676B',
+
+        'like': '#0866ff',
+        'love': '#f33e58',
+        'care': '#f7b125',
+        'haha': '#f7b125',
+        'wow': '#f7b125',
+        'sad': '#f7b125',
+        'angry': '#e9710f',
       },
       boxShadow: {
         'auth': '0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1)',
@@ -33,6 +44,10 @@ export default {
       gridTemplateRows: {
         'main-2': 'min-content 1fr'
       },
+      aspectRatio: {
+        'story-card': '9 / 16',
+        'post-card': '13 / 9',
+      }
     },
   },
   plugins: [],

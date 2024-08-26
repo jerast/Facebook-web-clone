@@ -1,18 +1,19 @@
 import { useState } from 'react'
-import { image } from '@shared/utils/img'
+import { Link } from 'react-router-dom'
+
 import { useAuthStore } from '@app/store/auth.store'
-import { appsSidebarItems } from '@app/config/uiConstants'
+import { SIDEBAR_ITEMS } from '@app/config/uiConstants'
+import { image } from '@shared/utils/img'
 
 import ArrowDownIcon from '@app/assets/svg/adown.svg?react'
-import { Link } from 'react-router-dom'
 
 export const Sidebar = () => {
   const { user } = useAuthStore()
-  const [ appList, setAppList ] = useState(appsSidebarItems.slice(0, 9))
+  const [ appList, setAppList ] = useState(SIDEBAR_ITEMS.slice(0, 9))
 
   const handleToogleExpand = () => appList.length <= 10 
-    ? setAppList([...appsSidebarItems])
-    : setAppList(appsSidebarItems.slice(0, 9))
+    ? setAppList([...SIDEBAR_ITEMS])
+    : setAppList(SIDEBAR_ITEMS.slice(0, 9))
 
   return (
     <aside className="sidebar">
@@ -42,7 +43,8 @@ export const Sidebar = () => {
               >
                 <img 
                   src="/img/facebook_items.png" alt={item.name} 
-                  className={`sidebar__item-img object-[0px_-${index*37}px]`} 
+                  className="sidebar__item-img"
+                  style={{ objectPosition: `0px -${index*37}px` }}
                 />
                 <span>{item.name}</span>
               </li>

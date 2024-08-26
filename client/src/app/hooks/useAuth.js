@@ -1,9 +1,10 @@
 import { useCallback } from 'react'
 import { useAuthStore } from '@app/store/auth.store'
 import { apiLogIn, apiSignUp, apiVerifyToken } from '@auth/services/auth.api'
+import { useSocket } from './useSocket'
 
 export const useAuth = () => {
-  const { 
+  const {
     setUser,
     setToken,
     setError,
@@ -14,6 +15,10 @@ export const useAuth = () => {
     authAuth,
     authNoAuth,
   } = useAuthStore()
+  // const {
+  //   connected,
+  //   disconnected
+  // } = useSocket()
 
   const setSession = useCallback((user, token) => {
     localStorage.setItem('facebook-clone-token', token)
@@ -21,6 +26,7 @@ export const useAuth = () => {
     authAuth()
     setUser(user)
     setToken(token)
+    // connected()
     clearError()
   }, [])
   
@@ -30,6 +36,7 @@ export const useAuth = () => {
     authNoAuth()
     clearUser()
     clearToken()
+    // disconnected()
     error && setError(error)
   }, [])
   

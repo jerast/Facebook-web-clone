@@ -6,10 +6,13 @@
   .main-container {
     @apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5] relative
   }
+  .basic-container {
+    @apply h-full w-full grid grid-rows-main-2 bg-[#f0f2f5] relative
+  }
 
 
   .header {
-    @apply col-start-1 col-end-4 h-14 z-10 flex justify-between bg-white shadow-md shadow-gray-300
+    @apply col-start-1 col-end-4 h-14 z-20 flex justify-between bg-white shadow-md shadow-gray-300
   }
   .header-start {
     @apply w-80 py-2 px-4 flex gap-2
@@ -65,7 +68,7 @@
 
 
   .sidebar {
-    @apply col-start-1 col-end-2 w-[360px] h-full grid grid-flow-dense overflow-y-auto pt-4 pb-3 px-2 grid-rows-[min-content_min-content_1fr]
+    @apply col-start-1 col-end-2 w-[360px] h-full pt-4 pb-3 px-2 flex flex-col overflow-y-auto z-[1]
   }
   .sidebar__profile-link,
   .sidebar__item,
@@ -93,7 +96,7 @@
     @apply m-2 px-2 border-[#CED0D4]
   }
   .sidebar__footer {
-    @apply mx-2 leading-4 block h-fit self-end
+    @apply mx-2 mt-auto leading-4
   }
   .sidebar__footer-copyright {
     @apply text-[12px] text-[#65676B] mt-auto h-full
@@ -101,7 +104,7 @@
 
 
   .contacts {
-    @apply col-start-3 col-end-4 w-[360px] h-full overflow-y-auto px-2 py-[17px]
+    @apply col-start-3 col-end-4 w-[360px] h-full overflow-y-auto px-2 py-[17px] z-[1]
   }
   .contacts__header {
     @apply w-full h-9 flex justify-between items-center
@@ -127,16 +130,17 @@
 
 
   .content {
-    @apply w-[680px] mt-14 pt-6 absolute justify-self-center
+    @apply w-full h-screen mx-[360px] pt-20 grid justify-items-center absolute justify-self-center content-start overflow-y-auto
   }
 
 
   .story-view {
-    @apply w-full h-[266px] pb-4 flex gap-2 overflow-x-auto
+    @apply w-[680px] h-[272px] pb-[22px] flex gap-2 overflow-x-auto items-stretch
   }
   .story-button,
   .story-card {
-    @apply w-[140.6px] min-w-[140.6px] h-full flex flex-col items-center bg-white rounded-2xl overflow-hidden shadow-md hover:brightness-95
+    @apply h-[250px] aspect-story-card flex flex-col items-center bg-white shrink-0
+    rounded-box overflow-hidden shadow-md hover:brightness-95
   }
   .story-button__img {
     @apply h-[202px] object-cover self-start
@@ -170,19 +174,5 @@
   }
   .story-card__img {
     @apply h-full object-cover object-center
-  }
-
-
-  .new-post-card {
-    @apply px-4 py-3 mt-[6px] flex gap-2 bg-white shadow-md rounded-2xl
-  }
-  .new-post-card__profile {
-    @apply rounded-full hover:brightness-95
-  }
-  .new-post-card__input-button {
-    @apply h-10 grow text-[#65676B] text-start px-4 rounded-full bg-[#F0F2F5] hover:bg-[#E4E6E9]
-  }
-  .new-post-card__img-button {
-    @apply h-10 w-10 rounded-full font-symbols text-[#45bd62] text-[24px] bg-[#F0F2F5] hover:bg-[#E4E6E9]
   }
 }

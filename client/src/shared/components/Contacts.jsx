@@ -54,11 +54,11 @@ export const Contacts = () => {
         </div>
         <ul className="contacts-list">
           <li className="contacts-item">
-            <img className="contacts-item__profile-picture" src="/img/profile.jpg" alt="" />
+            <img className="contacts-item__profile-picture" src="/img/profile.png" alt="" />
             <span className="contacts-item__username">Group chat</span>
           </li>
           <li className="contacts-item">
-            <img className="contacts-item__profile-picture" src="/img/profile.jpg" alt="" />
+            <img className="contacts-item__profile-picture" src="/img/profile.png" alt="" />
             <span className="contacts-item__username">Group chat</span>
           </li>
         </ul>

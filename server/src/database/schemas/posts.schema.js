@@ -4,20 +4,28 @@ const postSchema = Schema({
   author: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: true
+    required: true,
   },
   content: {
-    type: String,
-    default: ''
+    text: {
+      type: String,
+    },
+    theme: {
+      type: String,
+    },
   },
   image: {
-    type: String,
-    default: ''
+    url: {
+      type: String,
+    },
+    color: {
+      type: String,
+    },
   },
-  theme: {
-    type: String,
-    default: ''
-  },
+  shares: {
+    type: Number,
+    default: 0,
+  }
 }, {
   timestamps: true,
   toJSON: {

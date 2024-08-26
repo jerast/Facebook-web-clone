@@ -31,8 +31,10 @@ Content-Type: application/json
 PUT {{url}}/users/{{userId}}
 Content-Type: application/json
 
-# { "username": "jose.romero.9602" }
-{ "lastName": "Romero" }
+{ 
+  "firstName": "Linux", 
+  "lastName": "Torvalds"
+}
 
 
 ### User update profile picture

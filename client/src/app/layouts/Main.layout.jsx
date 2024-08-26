@@ -6,8 +6,8 @@ export const MainLayout = ({ children }) =>
   <div className="main-container">
     <Header />
     <Sidebar />
+    <Contacts />
     <main className="content">
       { children }
     </main>
-    <Contacts />
   </div>

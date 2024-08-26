@@ -25,9 +25,11 @@ const userSchema = Schema({
   profile: {
     public_id: {
       type: String,
+      default: 'Facebook-Clone/system/assets/pkvnxwqgdfdvlwp65hvv'
     },
     version: {
 			type: Number,
+      default: 1724189947
 		},
   },
   cover: {

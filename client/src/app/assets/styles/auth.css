@@ -8,9 +8,8 @@
     @apply flex flex-col gap-6 content-start items-center py-16 bg-[#f2f4f7]
   }
   .auth__logo {
-    @apply min-h-[34px] w-fit text-primary
+    @apply h-[34px] w-fit text-primary
   }
-
 
   .login-form {
     @apply w-full max-w-[400px] grid justify-items-center gap-3 px-4 pb-8 py-5 rounded-lg bg-white shadow-auth border border-[#dddfe2]
@@ -29,7 +28,6 @@
   .login-form__link {
     @apply text-primary text-[14px] hover:underline
   }
-
 
   .signup-form {
     @apply w-full max-w-[400px] grid justify-items-center gap-4 pb-8 pt-3 rounded-lg bg-white shadow-auth border border-[#dddfe2]
@@ -66,7 +64,6 @@
   .signup-form__col {
   @apply flex gap-3 px-4
   }
-
 
   .footer {
     @apply text-[#8a8d91] text-xs w-full max-w-[1060px] mx-auto px-10 py-8
