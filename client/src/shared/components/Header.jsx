@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useAuthStore } from '@app/store/auth.store'
 import { Navbar } from '@shared/components/Navbar'
-import { image } from '@shared/utils/img'
+import { getImage } from '@shared/utils/getImage'
 
 import FbIcon from '@app/assets/svg/icon.svg?react'
 import SearchIcon from '@app/assets/svg/search.svg?react'
@@ -40,7 +40,7 @@ export const Header = () => {
         <button className="header-actions__user">
           <img 
             className="header-actions__user-profile"
-            src={ image(user.profile, 40) } 
+            src={ getImage(user.profile, 40) } 
             alt={user.name} 
           />
         </button>

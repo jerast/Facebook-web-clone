@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useAuthStore } from '@app/store/auth.store'
-import { image } from '@shared/utils/img'
+import { getImage } from '@shared/utils/getImage'
 
 export const NewPostCard = () => { 
   const { user } = useAuthStore()
@@ -10,7 +10,7 @@ export const NewPostCard = () => {
       <Link to={`/${user.username}`}>
         <img 
           className="new-post-card__profile"
-          src={image(user.profile, 40)} 
+          src={getImage(user.profile, 40)} 
           alt={user.username} 
         />
       </Link>

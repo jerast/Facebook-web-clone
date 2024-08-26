@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { useAuthStore } from '@app/store/auth.store'
 import { SIDEBAR_ITEMS } from '@app/config/uiConstants'
-import { image } from '@shared/utils/img'
+import { getImage } from '@shared/utils/getImage'
 
 import ArrowDownIcon from '@app/assets/svg/adown.svg?react'
 
@@ -24,7 +24,7 @@ export const Sidebar = () => {
         >
           <img 
             className="sidebar__profile-picture" 
-            src={ image(user.profile, 40) } 
+            src={ getImage(user.profile, 40) } 
             alt={user.name} 
           />
           <span className="sidebar__profile-name">

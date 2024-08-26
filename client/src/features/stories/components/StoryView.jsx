@@ -1,6 +1,6 @@
 import { useAuthStore } from '@app/store/auth.store'
 import { StoryCard } from './StoryCard'
-import { image } from '@shared/utils/img'
+import { getImage } from '@shared/utils/getImage'
 import PlusIcon from '@app/assets/svg/plus1.svg?react'
 
 export const StoryView = () => {
@@ -11,7 +11,7 @@ export const StoryView = () => {
     <section className="story-view">
 
       <button className="story-button">
-        <img className="story-button__img" src={image(user.profile, null, 202)} alt="create story" />
+        <img className="story-button__img" src={getImage(user.profile, null, 202)} alt="create story" />
         <span className="story-button__div">
           <PlusIcon className="story-button__icon" />
           <p className="story-button__text">Create story</p>

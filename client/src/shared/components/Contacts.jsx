@@ -1,5 +1,5 @@
 import { useAuthStore } from '@app/store/auth.store'
-import { image } from '@shared/utils/img'
+import { getImage } from '@shared/utils/getImage'
 import OptionsIcon from '@app/assets/svg/options.svg?react'
 
 export const Contacts = () => {
@@ -16,31 +16,31 @@ export const Contacts = () => {
         </div>
         <ul className="contacts-list">
           <li className="contacts-item contacts-item--online">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
           <li className="contacts-item contacts-item--online">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
           <li className="contacts-item contacts-item--online">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
           <li className="contacts-item">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
           <li className="contacts-item">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
           <li className="contacts-item">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
           <li className="contacts-item">
-            <img className="contacts-item__profile-picture" src={image(user.profile, 40)} alt="" />
+            <img className="contacts-item__profile-picture" src={getImage(user.profile, 40)} alt="" />
             <span className="contacts-item__username">User name</span>
           </li>
         </ul>
