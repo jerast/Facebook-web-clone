@@ -1,7 +1,7 @@
 export const SHOW_EMOJIS_TIME = 750
 export const SHORT_POST_LENG = 85
 
-export const uiFooter = {
+export const UI_FOOTER = {
   languages: ["English (US)", "Español", "Français (France)", "Português (Brasil)", "Italiano", "Deutsch", "العربية", "हिन्दी", "中文(简体)", "日本語"],
   links: ["Sign Up", "Log In", "Messenger", "Facebook Lite", "Video", "Places", "Games", "Marketplace", "Meta Pay", "Meta Store", "Meta Quest", "Meta AI", "Instagram", "Threads", "Fundraisers", "Services", "Voting Information Center", "Privacy Policy", "Privacy Center", "Groups", "About", "Create ad", "Create Page", "Developers", "Careers", "Cookies", "Ad choices", "Terms", "Help", "Contact Uploading & Non-Users"],
 }
@@ -101,7 +101,7 @@ export const posts = [
     id: 'idkawdi3957332',
     author: '66b43b8cc9bc26cd4c02b491',
     content: {
-      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, at quisquam mollitia ea ipsum odit dolorum, hic impedit aspernatur saepe totam nobis veniam expedita quo! Sequi atque excepturi distinctio exercitationem similique earum quas?'
+      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, at quisquam mollitia ea ipsum odit dolorum, hic impedit aspernatur saepe totam nobis veniam expedita quo!'
     }
   },
   {
@@ -115,7 +115,7 @@ export const posts = [
     id: 'idkawdi3957337',
     author: '66b43b8cc9bc26cd4c02b491',
     content: {
-      text: 'This is a simple comment to testing',
+      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa dolor aliquid, ullam, deserunt fuga hic soluta optio laborum repellendus, consequuntur cumque impedit veniam amet aperiam. Earum numquam alias quod tempora amet. \nUllam pariatur porro necessitatibus nostrum deserunt cumque doloremque error distinctio rem laborum, voluptates, molestiae eaque id, ipsa esse eligendi!',
     },
     image: {
       url: '/img/post.jpg',
@@ -129,6 +129,28 @@ export const posts = [
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       theme: 1
     }
+  },
+  {
+    id: 'idkawdi3957339',
+    author: '66b43b8cc9bc26cd4c02b491',
+    content: {
+      text: 'This is a simple comment to testing',
+    },
+    image: {
+      url: '/img/post2.jpg',
+      color: '#FFFFFF'
+    }
+  },
+  {
+    id: 'idkawdi395737123',
+    author: '66b43b8cc9bc26cd4c02b491',
+    content: {
+      text: 'SQL command cheat sheet',
+    },
+    image: {
+      url: '/img/post3.webp',
+      color: '#2F2F2F'
+    }
   }
 ]
 
@@ -139,9 +161,9 @@ export const news = [
     post: 'idkawdi3957332',
     type: 'post',
     reactions: {
-      haha: [
-        '663awdcc9bc26cd4ddjawd32',
-      ]
+      like: [
+        '66b43b8cc9bc26cd4c02b491',
+      ],
     },
   },
   {
@@ -149,6 +171,14 @@ export const news = [
     user: '66b43b8cc9bc26cd4c02b491',
     post: 'idkawdi3957336',
     type: 'post',
+    reactions: {
+      haha: [
+        '663awdcc9bc26cd4ddjawd32',
+      ]
+    },
+    comments: [
+      { user: '663awdcc9bc26cd4ddjawd32', content: 'Holi hehehe' },
+    ],
   },
   {
     id: 'mjdj8123u57d',
@@ -174,10 +204,35 @@ export const news = [
     ],
   },
   {
+    id: 'mjdj8123412d',
+    user: '66b43b8cc9bc26cd4c02b491',
+    post: 'idkawdi3957339',
+    type: 'post',
+    reactions: {
+      haha: [
+        '663awdcc9bc26cd4ddjawd32',
+        '66c76413ecc023302196e6a6',
+      ],
+    },
+  },
+  {
+    id: 'mjdj8123413d',
+    user: '66b43b8cc9bc26cd4c02b491',
+    post: 'idkawdi395737123',
+    type: 'post',
+    reactions: {
+      like: [
+        '663awdcc9bc26cd4ddjawd32',
+      ],
+      wow: [
+        '66c76413ecc023302196e6a6',
+      ],
+    },
+  },
+  {
     id: 'mjdj8123u59d',
     user: '66b43b8cc9bc26cd4c02b491',
     post: 'idkawdi3957338',
     type: 'post',
   }
 ]
-

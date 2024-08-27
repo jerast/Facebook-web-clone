@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuthStore } from '@app/store/auth.store'
 import { getImage } from '@shared/utils/getImage'
 import { EMOJI_LIST, SHOW_EMOJIS_TIME } from '@app/config/uiConstants'
@@ -8,6 +8,16 @@ const LikeActionButton = ({ reactions, setReactions }) => {
   const [ likeState, setLikeState ] = useState(null)
   const [ likeTimer, setLikeTimer ] = useState(null)
   const [ showEmojis, setShowEmojis ] = useState(false)
+
+  useEffect(() => {
+    const userReaction = Object
+      .keys(reactions)
+      .find(key => reactions[key]?.includes(user.id))
+
+    if (userReaction) {
+      setLikeState( EMOJI_LIST[userReaction] )
+    }
+  }, [])
 
   const onLikeShowEmojis = () => {
     const newTimer = setTimeout(() => {
