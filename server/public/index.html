@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facebook - Server</title>
-  <script type="module">
-    import { io } from 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.esm.min.js'
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Facebook - Server</title>
+	<script type="module">
+		import { io } from 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.esm.min.js'
 
-    const socket = io()
+		const socket = io()
 
-    socket.on('connected', () => console.log('connected'))
-    socket.on('disconnect', () => console.log('disconnected'))
-  </script>
+		socket.on('connected', () => console.log('connected'))
+		socket.on('disconnect', () => console.log('disconnected'))
+	</script>
 </head>
 <body>
-  <h1>Server</h1>
+	<h1>Server</h1>
 </body>
 </html>

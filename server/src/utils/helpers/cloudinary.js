@@ -10,5 +10,5 @@ cloudinary.config({
 export const uploadImage = async (filePath, folder) =>
 	await cloudinary.uploader.upload(filePath, { folder });
 
-export const deleteImage = async (public_id) => 
+export const deleteImage = async (public_id) =>
 	await cloudinary.uploader.destroy(public_id);

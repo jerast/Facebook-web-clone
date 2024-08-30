@@ -1,35 +1,35 @@
 {
-  "name": "server",
-  "private": true,
-  "version": "0.3.3",
-  "type": "module",
-  "scripts": {
-    "dev": "node --watch src/index",
-    "host": "node --watch src/index",
-    "prod": "node src/index"
-  },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cloudinary": "^2.4.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "express-fileupload": "^1.5.1",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.2",
-    "socket.io": "^4.7.5",
-    "zod": "^3.23.8"
-  },
-  "imports": {
-    "#config/*": "./src/config/*",
-    "#connection/*": "./src/connection/*",
-    "#routes/*": "./src/routes/*",
-    "#controllers/*": "./src/controllers/*",
-    "#database/*": "./src/database/*",
-    "#models/*": "./src/models/*",
-    "#helpers/*": "./src/utils/helpers/*",
-    "#jwt/*": "./src/utils/jwt/*",
-    "#middlewares/*": "./src/utils/middlewares/*",
-    "#validators/*": "./src/utils/validators/*"
-  }
+	"name": "server",
+	"private": true,
+	"version": "0.4.0",
+	"type": "module",
+	"scripts": {
+		"dev": "node --watch src/index",
+		"host": "node --watch src/index",
+		"prod": "node src/index"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cloudinary": "^2.4.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"express-fileupload": "^1.5.1",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.5.2",
+		"socket.io": "^4.7.5",
+		"zod": "^3.23.8"
+	},
+	"imports": {
+		"#config/*": "./src/config/*",
+		"#connection/*": "./src/connection/*",
+		"#routes/*": "./src/routes/*",
+		"#controllers/*": "./src/controllers/*",
+		"#database/*": "./src/database/*",
+		"#models/*": "./src/models/*",
+		"#helpers/*": "./src/utils/helpers/*",
+		"#jwt/*": "./src/utils/jwt/*",
+		"#middlewares/*": "./src/utils/middlewares/*",
+		"#validators/*": "./src/utils/validators/*"
+	}
 }

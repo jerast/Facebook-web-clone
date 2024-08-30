@@ -9,8 +9,8 @@ POST {{url}}/auth/login
 Content-Type: application/json
 
 {
-  "user": "aura@gmail.com",
-  "password": "12345678"
+	"user": "aura@gmail.com",
+	"password": "12345678"
 }
 
 
@@ -19,8 +19,8 @@ POST {{url}}/auth/login
 Content-Type: application/json
 
 {
-  "user": "jose.romero.9602",
-  "password": "12345678"
+	"user": "jose.romero.9602",
+	"password": "12345678"
 }
 
 

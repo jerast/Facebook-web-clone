@@ -15,10 +15,10 @@ Content-Type: application/json
 #   "password": "12345678"
 # }
 {
-  "firstName": "Aura",
-  "lastName": "Castro",
-  "email": "aura@gmail.com",
-  "password": "12345678"
+	"firstName": "Aura",
+	"lastName": "Castro",
+	"email": "aura@gmail.com",
+	"password": "12345678"
 }
 
 
@@ -31,9 +31,9 @@ Content-Type: application/json
 PUT {{url}}/users/{{userId}}
 Content-Type: application/json
 
-{ 
-  "firstName": "Linux", 
-  "lastName": "Torvalds"
+{
+	"firstName": "Linux",
+	"lastName": "Torvalds"
 }
 
 
