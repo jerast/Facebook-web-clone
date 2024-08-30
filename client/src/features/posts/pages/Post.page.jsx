@@ -1,7 +1,7 @@
 export const PostPage = () => {
-  return (
-    <>
-      <h1>PostPage</h1>
-    </>
-  )
+	return (
+		<>
+			<h1>PostPage</h1>
+		</>
+	)
 }

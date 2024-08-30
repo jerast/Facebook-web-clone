@@ -1,91 +1,91 @@
 @font-face {
-  font-family:'popular-symbols';
-  src:url(/fonts/popular-symbols.woff2) format('woff2'),
-  url(/fonts/popular-symbols.woff) format('woff');
-  font-weight:normal;
-  font-style:normal;
-  font-display:block;
-  unicode-range:U+F1915,U+F0916,U+F0917,U+F0918,U+F0919,U+F091A,U+F060B,U+F0623,U+F0792,U+F0975,U+F07DD,U+F078B,U+F07E1,U+F0925,U+F0926,U+F0927,U+F1925,U+F06C5,U+F07A3,U+F06BC,U+F090A,U+F061A,U+F0915,U+F1918,U+F0900,U+F1917,U+F17B9,U+F07F6,U+F066A,U+F06FC,U+F07D5,U+F07D9,U+F161A,U+F0604,U+F064F,U+F0606,U+F0907,U+F16C5,U+F1606,U+F191A,U+F1972,U+F16BF,U+F1602,U+F160B,U+F190A,U+F17FB,U+F1901,U+F192D,U+F163F,U+F16E2,U+F1685,U+F166B,U+F17C5,U+F16FC,U+F1600,U+F1904,U+F163E,U+F1907,U+F1763,U+F16BC,U+F0685,U+F0618,U+F07B3,U+F06D0,U+F17B2,U+F0725,U+F0231,U+F0232,U+F0371,U+F0293,U+F0124,U+F1644,U+F1916,U+F061B,U+F1676,U+F0011,U+F194C,U+F193B,U+F0946,U+F093E,U+F0939,U+F0944,U+F093C,U+F094D,U+F1946,U+F193E,U+F1939,U+F1944,U+F193C,U+F194D,U+F0828,U+F1623,U+F0947,U+F1947,U+F093A,U+F193A,U+F0943,U+F1943,U+F094E,U+F194E,U+F093B,U+F094A,U+F194A,U+F0383,U+F1383,U+F0384,U+F1384,U+F038B,U+F138B,U+F038D,U+F138D,U+F0388,U+F1388,U+F038E,U+F138E,U+F0386,U+F1386,U+F0385,U+F1385,U+F0382,U+F1382,U+F1853,U+F0378,U+F0379,U+F037A
+	font-family:'popular-symbols';
+	src:url(/fonts/popular-symbols.woff2) format('woff2'),
+	url(/fonts/popular-symbols.woff) format('woff');
+	font-weight:normal;
+	font-style:normal;
+	font-display:block;
+	unicode-range:U+F1915,U+F0916,U+F0917,U+F0918,U+F0919,U+F091A,U+F060B,U+F0623,U+F0792,U+F0975,U+F07DD,U+F078B,U+F07E1,U+F0925,U+F0926,U+F0927,U+F1925,U+F06C5,U+F07A3,U+F06BC,U+F090A,U+F061A,U+F0915,U+F1918,U+F0900,U+F1917,U+F17B9,U+F07F6,U+F066A,U+F06FC,U+F07D5,U+F07D9,U+F161A,U+F0604,U+F064F,U+F0606,U+F0907,U+F16C5,U+F1606,U+F191A,U+F1972,U+F16BF,U+F1602,U+F160B,U+F190A,U+F17FB,U+F1901,U+F192D,U+F163F,U+F16E2,U+F1685,U+F166B,U+F17C5,U+F16FC,U+F1600,U+F1904,U+F163E,U+F1907,U+F1763,U+F16BC,U+F0685,U+F0618,U+F07B3,U+F06D0,U+F17B2,U+F0725,U+F0231,U+F0232,U+F0371,U+F0293,U+F0124,U+F1644,U+F1916,U+F061B,U+F1676,U+F0011,U+F194C,U+F193B,U+F0946,U+F093E,U+F0939,U+F0944,U+F093C,U+F094D,U+F1946,U+F193E,U+F1939,U+F1944,U+F193C,U+F194D,U+F0828,U+F1623,U+F0947,U+F1947,U+F093A,U+F193A,U+F0943,U+F1943,U+F094E,U+F194E,U+F093B,U+F094A,U+F194A,U+F0383,U+F1383,U+F0384,U+F1384,U+F038B,U+F138B,U+F038D,U+F138D,U+F0388,U+F1388,U+F038E,U+F138E,U+F0386,U+F1386,U+F0385,U+F1385,U+F0382,U+F1382,U+F1853,U+F0378,U+F0379,U+F037A
 }
 @font-face {
-  font-family:'lite-glyphs-filled';
-  src:url(/fonts/lite-glyphs-filled.woff2) format('woff2'),
-  url(/fonts/lite-glyphs-filled.woff) format('woff');
-  font-weight:normal;
-  font-style:normal;
-  font-display:block;
-  unicode-range:U+F1372-F25FF
+	font-family:'lite-glyphs-filled';
+	src:url(/fonts/lite-glyphs-filled.woff2) format('woff2'),
+	url(/fonts/lite-glyphs-filled.woff) format('woff');
+	font-weight:normal;
+	font-style:normal;
+	font-display:block;
+	unicode-range:U+F1372-F25FF
 }
 
 @keyframes emoji-jump-like {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 @keyframes emoji-jump-love {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 @keyframes emoji-jump-care {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 @keyframes emoji-jump-haha {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 @keyframes emoji-jump-wow {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 @keyframes emoji-jump-sad {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 @keyframes emoji-jump-angry {
-  0% {
-    animation-timing-function:cubic-bezier(.19,1,.22,1);
-    transform:scale(1) rotate(0deg)
-  }
-  50% {
-    animation-timing-function:cubic-bezier(.95,.05,.795,.035);
-    transform:scale(1.24) rotate(-8deg)
-  }
+	0% {
+		animation-timing-function:cubic-bezier(.19,1,.22,1);
+		transform:scale(1) rotate(0deg)
+	}
+	50% {
+		animation-timing-function:cubic-bezier(.95,.05,.795,.035);
+		transform:scale(1.24) rotate(-8deg)
+	}
 }
 
 @tailwind base;
@@ -93,15 +93,15 @@
 @tailwind utilities;
 
 * {
-  @apply select-none font-sans;
+	@apply select-none font-sans;
 }
 #root {
-  @apply relative h-screen text-gray-800;
+	@apply relative h-screen text-gray-800;
 }
 * {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 *::-webkit-scrollbar {
-  display: none;
+	display: none;
 }

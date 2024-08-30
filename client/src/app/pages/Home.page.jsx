@@ -7,15 +7,15 @@ import { PostList } from '@posts/containers/PostList'
 
 export const HomePage = () => {
 
-  useEffect(() => {
-    title('Facebook clone')
-  }, [])
+	useEffect(() => {
+		title('Facebook clone')
+	}, [])
 
-  return (
-    <MainLayout>
-      <StoryView />
-      <NewPostCard />
-      <PostList />
-    </MainLayout>
-  )
+	return (
+		<MainLayout>
+			<StoryView />
+			<NewPostCard />
+			<PostList />
+		</MainLayout>
+	)
 }

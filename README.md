@@ -35,7 +35,7 @@ The goal of this project is to replicate the main functionalities of Facebook, i
   - [ ] Display user profile design
   
   **News Feed**
-  - [ ] Design news feed schema
+  - [X] Design news feed schema
   - [ ] Develop news endpoints functions and socket events
   - [ ] Implement news feed displaying posts from friends
   

@@ -8,31 +8,31 @@ import { AuthRoutes } from '@app/routes/Auth.routes'
 import { useAuthStore } from '@store/auth.store'
 
 export const App = () => {
-  const { status } = useAuthStore()
-  const { verifyToken } = useAuth()
+	const { status } = useAuthStore()
+	const { verifyToken } = useAuth()
 
-  useLayoutEffect(() => { 
-    verifyToken()
-  }, [])
+	useLayoutEffect(() => {
+		verifyToken()
+	}, [])
 
-  const appRouter = () => {
-    switch (status) {
-      case 'auth': 
-        return <Route path="*" element={ <AppRoutes /> }/>
-      case 'no-auth': 
-        return <Route path="*" element={ <AuthRoutes /> }/>
-      default: 
-        return <Route path="*" element={ <></> }/>
-    }
-  }
+	const appRouter = () => {
+		switch (status) {
+			case 'auth':
+				return <Route path="*" element={ <AppRoutes /> }/>
+			case 'no-auth':
+				return <Route path="*" element={ <AuthRoutes /> }/>
+			default:
+				return <Route path="*" element={ <></> }/>
+		}
+	}
 
-  return ( 
-    <>
-      <BrowserRouter>
-        <Routes>
-          { appRouter() }
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+	return (
+		<>
+			<BrowserRouter>
+				<Routes>
+					{ appRouter() }
+				</Routes>
+			</BrowserRouter>
+		</>
+	)
 }

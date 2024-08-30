@@ -6,14 +6,14 @@ import { StoryPage } from '@stories/pages/Story.page'
 import { NotFoundPage } from '@app/pages/NotFound.page'
 
 export const AppRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/" element={ <HomePage /> } />
-      <Route path="/story/:id" element={ <StoryPage /> } />
-      <Route path="/post/:id" element={ <PostPage /> } />
-      <Route path="/:id" element={ <UserPage /> } />
+	return (
+		<Routes>
+			<Route path="/" element={ <HomePage /> } />
+			<Route path="/story/:id" element={ <StoryPage /> } />
+			<Route path="/post/:id" element={ <PostPage /> } />
+			<Route path="/:id" element={ <UserPage /> } />
 
-      <Route path="*" element={ <NotFoundPage /> } />
-    </Routes>
-  )
+			<Route path="*" element={ <NotFoundPage /> } />
+		</Routes>
+	)
 }

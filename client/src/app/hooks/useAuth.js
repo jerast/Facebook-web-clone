@@ -4,80 +4,80 @@ import { apiLogIn, apiSignUp, apiVerifyToken } from '@auth/services/auth.api'
 import { useSocket } from './useSocket'
 
 export const useAuth = () => {
-  const {
-    setUser,
-    setToken,
-    setError,
-    clearUser,
-    clearToken,
-    clearError,
-    authChecking,
-    authAuth,
-    authNoAuth,
-  } = useAuthStore()
-  // const {
-  //   connected,
-  //   disconnected
-  // } = useSocket()
+	const {
+		setUser,
+		setToken,
+		setError,
+		clearUser,
+		clearToken,
+		clearError,
+		authChecking,
+		authAuth,
+		authNoAuth,
+	} = useAuthStore()
+	// const {
+	//   connected,
+	//   disconnected
+	// } = useSocket()
 
-  const setSession = useCallback((user, token) => {
-    localStorage.setItem('facebook-clone-token', token)
+	const setSession = useCallback((user, token) => {
+		localStorage.setItem('facebook-clone-token', token)
 
-    authAuth()
-    setUser(user)
-    setToken(token)
-    // connected()
-    clearError()
-  }, [])
-  
-  const clearSession = useCallback((error = null) => {
-    localStorage.removeItem('facebook-clone-token')
-    
-    authNoAuth()
-    clearUser()
-    clearToken()
-    // disconnected()
-    error && setError(error)
-  }, [])
-  
+		authAuth()
+		setUser(user)
+		setToken(token)
+		// connected()
+		clearError()
+	}, [])
 
-  const verifyToken = useCallback(async () => {
-    const token = localStorage.getItem('facebook-clone-token')
-    if (!token) return clearSession()
+	const clearSession = useCallback((error = null) => {
+		localStorage.removeItem('facebook-clone-token')
 
-    const { ok, user, newToken, error } = await apiVerifyToken()
+		authNoAuth()
+		clearUser()
+		clearToken()
+		// disconnected()
+		error && setError(error)
+	}, [])
 
-    return ok
-      ? setSession(user, newToken)
-      : clearSession(error)
-  }, [])
 
-  const logIn = useCallback(async (loginData) => {
-    authChecking()
+	const verifyToken = useCallback(async () => {
+		const token = localStorage.getItem('facebook-clone-token')
+		if (!token) return clearSession()
 
-    const { ok, user, token, error } = await apiLogIn(loginData)
+		const { ok, user, newToken, error } = await apiVerifyToken()
 
-    ok 
-      ? setSession(user, token)
-      : clearSession(error)
+		return ok
+			? setSession(user, newToken)
+			: clearSession(error)
+	}, [])
 
-    return { ok, error }
-  }, [])
+	const logIn = useCallback(async (loginData) => {
+		authChecking()
 
-  const signUp = useCallback(async (signupData) => {
-    const { ok, error } = await apiSignUp(signupData)
-    
-    return { ok, error }
-  }, [])
-  
-  const logOut = useCallback(() => {
-    clearSession()
-  }, [])
-  
-  return {
-    verifyToken,
-    logIn,
-    logOut,
-    signUp,
-  }
+		const { ok, user, token, error } = await apiLogIn(loginData)
+
+		ok
+			? setSession(user, token)
+			: clearSession(error)
+
+		return { ok, error }
+	}, [])
+
+	const signUp = useCallback(async (signupData) => {
+		const { ok, error } = await apiSignUp(signupData)
+
+		return { ok, error }
+	}, [])
+
+	const logOut = useCallback(() => {
+		clearSession()
+	}, [])
+
+	return {
+		verifyToken,
+		logIn,
+		logOut,
+		signUp,
+	}
 }

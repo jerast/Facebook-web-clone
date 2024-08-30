@@ -4,81 +4,81 @@
 
 @layer components {
 
-  .auth {
-    @apply flex flex-col gap-6 content-start items-center py-16 bg-[#f2f4f7]
-  }
-  .auth__logo {
-    @apply h-[34px] w-fit text-primary
-  }
+	.auth {
+		@apply flex flex-col gap-6 content-start items-center py-16 bg-[#f2f4f7]
+	}
+	.auth__logo {
+		@apply h-[34px] w-fit text-primary
+	}
 
-  .login-form {
-    @apply w-full max-w-[400px] grid justify-items-center gap-3 px-4 pb-8 py-5 rounded-lg bg-white shadow-auth border border-[#dddfe2]
-  }
-  .login-form__title {
-    @apply text-lg
-  }
-  .login-form__input {
-    @apply w-full px-[14px] py-[14px] text-[17px] border outline-none rounded-lg border-[#dddfe2]
-      placeholder:text-[#bec3c9] focus:placeholder:text-[#bec3c999]
-  }
-  .login-form__button {
-    @apply h-12 text-xl font-bold w-full rounded-lg transition-all duration-200
-      text-white bg-primary hover:bg-primary-hover focus:bg-primary disabled:bg-gray-400
-  }
-  .login-form__link {
-    @apply text-primary text-[14px] hover:underline
-  }
+	.login-form {
+		@apply w-full max-w-[400px] grid justify-items-center gap-3 px-4 pb-8 py-5 rounded-lg bg-white shadow-auth border border-[#dddfe2]
+	}
+	.login-form__title {
+		@apply text-lg
+	}
+	.login-form__input {
+		@apply w-full px-[14px] py-[14px] text-[17px] border outline-none rounded-lg border-[#dddfe2]
+			placeholder:text-[#bec3c9] focus:placeholder:text-[#bec3c999]
+	}
+	.login-form__button {
+		@apply h-12 text-xl font-bold w-full rounded-lg transition-all duration-200
+			text-white bg-primary hover:bg-primary-hover focus:bg-primary disabled:bg-gray-400
+	}
+	.login-form__link {
+		@apply text-primary text-[14px] hover:underline
+	}
 
-  .signup-form {
-    @apply w-full max-w-[400px] grid justify-items-center gap-4 pb-8 pt-3 rounded-lg bg-white shadow-auth border border-[#dddfe2]
-  }
-  .signup-form__header {
-    @apply w-full border-b text-center pb-3 px-4
-  }
-  .signup-form__title {
-    @apply text-2xl font-semibold
-  }
-  .signup-form__subtitle {
-    @apply text-sm text-[#606770]
-  }
-  .signup-form__content {
-    @apply w-full px-4 grid grid-cols-2 gap-3 justify-items-center
-  }
-  .signup-form__content *:nth-child(n+3) {
-    @apply col-start-1 col-end-3
-  }
-  .signup-form__input {
-    @apply block w-full px-[14px] py-[14px] text-[17px] border outline-none rounded-lg border-[#dddfe2] 
-      placeholder:text-[#bec3c9] focus:placeholder:text-[#bec3c999]
-  }
-  .signup-form__button {
-    @apply h-12 text-lg w-3/5 font-bold rounded-lg transition-all duration-200
-      text-white bg-success hover:bg-success-hover focus:bg-success disabled:bg-gray-400
-  }
-  .signup-form__abbeas-data {
-    @apply text-[11px] text-[#777] px-4 grid gap-3
-  }
-  .signup-form__link {
-    @apply text-primary text-[14px] hover:underline
-  }
-  .signup-form__col {
-  @apply flex gap-3 px-4
-  }
+	.signup-form {
+		@apply w-full max-w-[400px] grid justify-items-center gap-4 pb-8 pt-3 rounded-lg bg-white shadow-auth border border-[#dddfe2]
+	}
+	.signup-form__header {
+		@apply w-full border-b text-center pb-3 px-4
+	}
+	.signup-form__title {
+		@apply text-2xl font-semibold
+	}
+	.signup-form__subtitle {
+		@apply text-sm text-[#606770]
+	}
+	.signup-form__content {
+		@apply w-full px-4 grid grid-cols-2 gap-3 justify-items-center
+	}
+	.signup-form__content *:nth-child(n+3) {
+		@apply col-start-1 col-end-3
+	}
+	.signup-form__input {
+		@apply block w-full px-[14px] py-[14px] text-[17px] border outline-none rounded-lg border-[#dddfe2]
+			placeholder:text-[#bec3c9] focus:placeholder:text-[#bec3c999]
+	}
+	.signup-form__button {
+		@apply h-12 text-lg w-3/5 font-bold rounded-lg transition-all duration-200
+			text-white bg-success hover:bg-success-hover focus:bg-success disabled:bg-gray-400
+	}
+	.signup-form__abbeas-data {
+		@apply text-[11px] text-[#777] px-4 grid gap-3
+	}
+	.signup-form__link {
+		@apply text-primary text-[14px] hover:underline
+	}
+	.signup-form__col {
+	@apply flex gap-3 px-4
+	}
 
-  .footer {
-    @apply text-[#8a8d91] text-xs w-full max-w-[1060px] mx-auto px-10 py-8
-  } 
-  .footer__languages,
-  .footer__apps {
-    @apply flex flex-wrap gap-x-5 leading-[19.2px]
-  }
-  .footer__languages li:first-child {
-    @apply text-[#707377] underline cursor-pointer
-  }
-  .footer__divisor {
-    @apply my-2
-  }
-  .footer__copyright {
-    @apply block my-5
-  }
+	.footer {
+		@apply text-[#8a8d91] text-xs w-full max-w-[1060px] mx-auto px-10 py-8
+	}
+	.footer__languages,
+	.footer__apps {
+		@apply flex flex-wrap gap-x-5 leading-[19.2px]
+	}
+	.footer__languages li:first-child {
+		@apply text-[#707377] underline cursor-pointer
+	}
+	.footer__divisor {
+		@apply my-2
+	}
+	.footer__copyright {
+		@apply block my-5
+	}
 }

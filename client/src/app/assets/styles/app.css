@@ -3,176 +3,176 @@
 @tailwind utilities;
 
 @layer components {
-  .main-container {
-    @apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5] relative
-  }
-  .basic-container {
-    @apply h-full w-full grid grid-rows-main-2 bg-[#f0f2f5] relative
-  }
+	.main-container {
+		@apply h-full w-full grid grid-cols-main-3 grid-rows-main-2 bg-[#f0f2f5] relative
+	}
+	.basic-container {
+		@apply h-full w-full grid grid-rows-main-2 bg-[#f0f2f5] relative
+	}
 
 
-  .header {
-    @apply col-start-1 col-end-4 h-14 z-20 flex justify-between bg-white shadow-md shadow-gray-300
-  }
-  .header-start {
-    @apply w-80 py-2 px-4 flex gap-2
-  }
-  .header-start__icon {
-    @apply h-10 w-10 fill-primary
-  }
-  .header-start__search {
-    @apply h-10 flex grow items-center gap-2 px-3 bg-[#f0f2f5] rounded-full 
-  }
-  .header-start__search-icon {
-    @apply h-4 fill-[#65676B]
-  }
-  .header-start__search-input {
-    @apply bg-transparent text-[15px] pb-[2px] border-none focus:outline-none /* #65676B */
-  }
-  .header-actions {
-    @apply w-80 flex justify-end gap-2 py-2 px-4
-  }
-  .header-actions__button,
-  .header-actions__user {
-    @apply h-10 w-10 flex rounded-full overflow-hidden bg-[#E4E6EB] hover:bg-[#DADDE1]
-  }
-  .header-actions__user {
-    @apply hover:brightness-95
-  }
-  .header-actions__button-icon {
-    @apply h-5 w-5 m-auto
-  }
+	.header {
+		@apply col-start-1 col-end-4 h-14 z-20 flex justify-between bg-white shadow-md shadow-gray-300
+	}
+	.header-start {
+		@apply w-80 py-2 px-4 flex gap-2
+	}
+	.header-start__icon {
+		@apply h-10 w-10 fill-primary
+	}
+	.header-start__search {
+		@apply h-10 flex grow items-center gap-2 px-3 bg-[#f0f2f5] rounded-full
+	}
+	.header-start__search-icon {
+		@apply h-4 fill-[#65676B]
+	}
+	.header-start__search-input {
+		@apply bg-transparent text-[15px] pb-[2px] border-none focus:outline-none /* #65676B */
+	}
+	.header-actions {
+		@apply w-80 flex justify-end gap-2 py-2 px-4
+	}
+	.header-actions__button,
+	.header-actions__user {
+		@apply h-10 w-10 flex rounded-full overflow-hidden bg-[#E4E6EB] hover:bg-[#DADDE1]
+	}
+	.header-actions__user {
+		@apply hover:brightness-95
+	}
+	.header-actions__button-icon {
+		@apply h-5 w-5 m-auto
+	}
 
 
-  .navbar {
-    @apply w-[680px]
-  }
-  .navbar__list {
-    @apply h-full flex gap-2
-  }
-  .navbar__item {
-    @apply mx-[2px] my-1 grow flex items-center justify-center rounded-lg hover:bg-[#f0f2f5] relative hover:cursor-pointer
-  }
-  .navbar__item-icon {
-    @apply h-6 w-6 fill-[#65676B]
-  }
-  .navbar__item--active {
-    @apply hover:bg-white after:w-full after:h-[3px] after:absolute after:-bottom-1 after:bg-primary
-  }
-  .navbar__item--active .navbar__item-icon {
-    @apply fill-primary
-  }
-  .navbar__item-link {
-    @apply w-full h-full flex justify-center items-center
-  }
+	.navbar {
+		@apply w-[680px]
+	}
+	.navbar__list {
+		@apply h-full flex gap-2
+	}
+	.navbar__item {
+		@apply mx-[2px] my-1 grow flex items-center justify-center rounded-lg hover:bg-[#f0f2f5] relative hover:cursor-pointer
+	}
+	.navbar__item-icon {
+		@apply h-6 w-6 fill-[#65676B]
+	}
+	.navbar__item--active {
+		@apply hover:bg-white after:w-full after:h-[3px] after:absolute after:-bottom-1 after:bg-primary
+	}
+	.navbar__item--active .navbar__item-icon {
+		@apply fill-primary
+	}
+	.navbar__item-link {
+		@apply w-full h-full flex justify-center items-center
+	}
 
 
-  .sidebar {
-    @apply col-start-1 col-end-2 w-[360px] h-full pt-4 pb-3 px-2 flex flex-col overflow-y-auto z-[1]
-  }
-  .sidebar__profile-link,
-  .sidebar__item,
-  .sidebar__button {
-    @apply w-full h-12 flex px-2 py-[6px] gap-3 items-center hover:bg-[#E4E6EB] rounded-lg text-sm cursor-pointer
-  }
-  .sidebar__profile-picture,
-  .sidebar__item-img,
-  .sidebar__button-icon {
-    @apply h-full aspect-square rounded-full
-  }
-  .sidebar__item-img {
-    @apply object-none rounded-none
-  }
-  .sidebar__button-icon {
-    @apply bg-[#E4E6EB] p-2
-  }
-  .sidebar__button:hover .sidebar__button-icon {
-    @apply bg-[#DADDE1]
-  }
-  .sidebar__button[open] .sidebar__button-icon {
-    @apply rotate-180
-  }
-  .sidebar__hr {
-    @apply m-2 px-2 border-[#CED0D4]
-  }
-  .sidebar__footer {
-    @apply mx-2 mt-auto leading-4
-  }
-  .sidebar__footer-copyright {
-    @apply text-[12px] text-[#65676B] mt-auto h-full
-  }
+	.sidebar {
+		@apply col-start-1 col-end-2 w-[360px] h-full pt-4 pb-3 px-2 flex flex-col overflow-y-auto z-[1]
+	}
+	.sidebar__profile-link,
+	.sidebar__item,
+	.sidebar__button {
+		@apply w-full h-12 flex px-2 py-[6px] gap-3 items-center hover:bg-[#E4E6EB] rounded-xl text-sm cursor-pointer
+	}
+	.sidebar__profile-picture,
+	.sidebar__item-img,
+	.sidebar__button-icon {
+		@apply h-full aspect-square rounded-full
+	}
+	.sidebar__item-img {
+		@apply object-none rounded-none
+	}
+	.sidebar__button-icon {
+		@apply bg-[#E4E6EB] p-2
+	}
+	.sidebar__button:hover .sidebar__button-icon {
+		@apply bg-[#DADDE1]
+	}
+	.sidebar__button[open] .sidebar__button-icon {
+		@apply rotate-180
+	}
+	.sidebar__hr {
+		@apply m-2 px-2 border-[#CED0D4]
+	}
+	.sidebar__footer {
+		@apply mx-2 mt-auto leading-4
+	}
+	.sidebar__footer-copyright {
+		@apply text-[12px] text-[#65676B] mt-auto h-full
+	}
 
 
-  .contacts {
-    @apply col-start-3 col-end-4 w-[360px] h-full overflow-y-auto px-2 py-[17px] z-[1]
-  }
-  .contacts__header {
-    @apply w-full h-9 flex justify-between items-center
-  }
-  .contacts__header-text {
-    @apply pl-2 font-semibold text-[#65676B]
-  }
-  .contacts__header-button {
-    @apply h-9 w-9 rounded-full hover:bg-[#E4E6EB]
-  }
-  .contacts__header-button-icon {
-    @apply fill-[#65676B] h-5 w-5 m-auto
-  }
-  .contacts-item {
-    @apply w-full h-12 flex px-2 py-[6px] gap-3 items-center relative hover:bg-[#E4E6EB] rounded-lg text-sm cursor-pointer 
-  }
-  .contacts-item--online {
-    @apply after:left-[33px] after:top-[31px] after:w-2 after:h-2 after:rounded-full after:border-2 after:border-[#f0f2f5] after:box-content after:absolute after:bottom-[8px] after:bg-[#31a24c]
-  }
-  .contacts-item__profile-picture {
-    @apply h-full aspect-square rounded-full
-  }
+	.contacts {
+		@apply col-start-3 col-end-4 w-[360px] h-full overflow-y-auto px-2 py-[17px] z-[1]
+	}
+	.contacts__header {
+		@apply w-full h-9 flex justify-between items-center
+	}
+	.contacts__header-text {
+		@apply pl-2 font-semibold text-[#65676B]
+	}
+	.contacts__header-button {
+		@apply h-9 w-9 rounded-full hover:bg-[#E4E6EB]
+	}
+	.contacts__header-button-icon {
+		@apply fill-[#65676B] h-5 w-5 m-auto
+	}
+	.contacts-item {
+		@apply w-full h-12 flex px-2 py-[6px] gap-3 items-center relative hover:bg-[#E4E6EB] rounded-xl text-sm cursor-pointer
+	}
+	.contacts-item--online {
+		@apply after:left-[33px] after:top-[31px] after:w-2 after:h-2 after:rounded-full after:border-2 after:border-[#f0f2f5] after:box-content after:absolute after:bottom-[8px] after:bg-[#31a24c]
+	}
+	.contacts-item__profile-picture {
+		@apply h-full aspect-square rounded-full
+	}
 
 
-  .content {
-    @apply w-full h-screen mx-[360px] pt-20 grid justify-items-center absolute justify-self-center content-start overflow-y-auto
-  }
+	.content {
+		@apply w-full h-screen mx-[360px] pt-20 grid justify-items-center absolute justify-self-center content-start overflow-y-auto
+	}
 
 
-  .story-view {
-    @apply w-[680px] h-[272px] pb-[22px] flex gap-2 overflow-x-auto items-stretch
-  }
-  .story-button,
-  .story-card {
-    @apply h-[250px] aspect-story-card flex flex-col items-center bg-white shrink-0
-    rounded-box overflow-hidden shadow-md hover:brightness-95
-  }
-  .story-button__img {
-    @apply h-[202px] object-cover self-start
-  }
-  .story-button__div {
-    @apply relative w-full flex grow justify-center p-[7px]
-  }
-  .story-button__icon {
-    @apply w-10 p-1 bg-primary fill-white rounded-full border-4 border-white absolute top-[-20px]
-  }
-  .story-button__text {
-    @apply text-xs font-semibold self-end
-  }
-  .story-card {
-    @apply relative cursor-pointer
-  }
-  .story-card__user{
-    @apply w-full h-full flex flex-col absolute z-10 justify-between
-  }
-  .story-card__user-profile {
-    @apply h-10 w-10 m-3 border-4 rounded-full border-primary
-  }
-  .story-card--viewed .story-card__user-profile {
-    @apply border-white
-  }
-  .story-card__user-name {
-    @apply mx-3 my-[7px] text-xs font-semibold text-white
-  }
-  .story-card__backdrop {
-    @apply absolute h-full w-full bg-story
-  }
-  .story-card__img {
-    @apply h-full object-cover object-center
-  }
+	.story-view {
+		@apply w-[680px] h-[272px] pb-[22px] flex gap-2 overflow-x-auto items-stretch
+	}
+	.story-button,
+	.story-card {
+		@apply h-[250px] aspect-story-card flex flex-col items-center bg-white shrink-0
+		rounded-box overflow-hidden shadow-md hover:brightness-95
+	}
+	.story-button__img {
+		@apply h-[202px] object-cover self-start
+	}
+	.story-button__div {
+		@apply relative w-full flex grow justify-center p-[7px]
+	}
+	.story-button__icon {
+		@apply w-10 p-1 bg-primary fill-white rounded-full border-4 border-white absolute top-[-20px]
+	}
+	.story-button__text {
+		@apply text-xs font-semibold self-end
+	}
+	.story-card {
+		@apply relative cursor-pointer
+	}
+	.story-card__user{
+		@apply w-full h-full flex flex-col absolute z-10 justify-between
+	}
+	.story-card__user-profile {
+		@apply h-10 w-10 m-3 border-4 rounded-full border-primary
+	}
+	.story-card--viewed .story-card__user-profile {
+		@apply border-white
+	}
+	.story-card__user-name {
+		@apply mx-3 my-[7px] text-xs font-semibold text-white
+	}
+	.story-card__backdrop {
+		@apply absolute h-full w-full bg-story
+	}
+	.story-card__img {
+		@apply h-full object-cover object-center
+	}
 }
