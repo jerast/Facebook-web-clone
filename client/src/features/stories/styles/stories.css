@@ -1,0 +1,41 @@
+.story-view {
+	@apply w-[680px] h-[272px] pb-[22px] flex gap-2 overflow-x-auto items-stretch
+}
+.story-button,
+.story-card {
+	@apply h-[250px] aspect-story-card flex flex-col items-center bg-white shrink-0
+	rounded-box overflow-hidden shadow-md hover:brightness-95
+}
+.story-button__img {
+	@apply h-[202px] object-cover self-start
+}
+.story-button__div {
+	@apply relative w-full flex grow justify-center p-[7px]
+}
+.story-button__icon {
+	@apply w-10 p-1 bg-primary fill-white rounded-full border-4 border-white absolute top-[-20px]
+}
+.story-button__text {
+	@apply text-xs font-semibold self-end
+}
+.story-card {
+	@apply relative cursor-pointer
+}
+.story-card__user{
+	@apply w-full h-full flex flex-col absolute z-10 justify-between
+}
+.story-card__user-profile {
+	@apply h-10 w-10 m-3 border-4 rounded-full border-primary
+}
+.story-card--viewed .story-card__user-profile {
+	@apply border-white
+}
+.story-card__user-name {
+	@apply mx-3 my-[7px] text-xs font-semibold text-white
+}
+.story-card__backdrop {
+	@apply absolute h-full w-full bg-story
+}
+.story-card__img {
+	@apply h-full object-cover object-center
+}

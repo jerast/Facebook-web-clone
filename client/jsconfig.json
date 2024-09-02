@@ -4,12 +4,14 @@
 		"paths": {
       "@app/*": ["src/app/*"],
       "@store/*": ["src/app/store/*"],
+
       "@auth/*": ["src/features/auth/*"],
       "@stories/*": ["src/features/stories/*"],
       "@chat/*": ["src/features/chat/*"],
       "@friends/*": ["src/features/friends/*"],
       "@posts/*": ["src/features/posts/*"],
       "@users/*": ["src/features/users/*"],
+      
       "@shared/*": ["src/shared/*"],
 		},
 	},

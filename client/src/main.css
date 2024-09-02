@@ -1,4 +1,25 @@
+/*
+	==================================
+	====     Tailwind Imports     ====
+	==================================
+*/
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*
+	==================================
+	=====     General Styles     =====
+	==================================
+*/
 @import './app/assets/styles/config.css';
-@import './app/assets/styles/auth.css';
 @import './app/assets/styles/app.css';
-@import './app/assets/styles/posts.css';
+
+/*
+	===================================
+	====     Components Styles     ====
+	===================================
+*/
+@import './features/auth/styles/auth.css';
+@import './features/posts/styles/posts.css';
+@import './features/stories/styles/stories.css';

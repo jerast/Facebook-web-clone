@@ -88,10 +88,6 @@
 	}
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
 	@apply select-none font-sans;
 }

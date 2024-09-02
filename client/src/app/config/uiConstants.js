@@ -133,12 +133,12 @@ export const posts = [
 			{ user: '663awdcc9bc26cd4ddjawd32', content: 'Holi hehehe' },
 		],
 	},
-	{
+	/* {
 		id: 'cfdj8123u01d',
 		user: '663awdcc9bc26cd4ddjawd32',
 		type: 'share',
 		ref: 'mjdj8123u01d'
-	},
+	}, */
 
 	{
 		id: 'mjdj8123u02d',
@@ -169,12 +169,12 @@ export const posts = [
 			{ user: '663awdcc9bc26cd4ddjawd32', content: 'Please, add more' },
 		],
 	},
-	{
+	/* {
 		id: 'cfdj8123u02d',
 		user: '663awdcc9bc26cd4ddjawd32',
 		type: 'share',
 		ref: 'mjdj8123u02d'
-	},
+	}, */
 
 	{
 		id: 'mjdj8123412d',
@@ -192,12 +192,12 @@ export const posts = [
 			],
 		},
 	},
-	{
+	/* {
 		id: 'cfdj8123412d',
 		user: '663awdcc9bc26cd4ddjawd32',
 		type: 'share',
 		ref: 'mjdj8123412d',
-	},
+	}, */
 
 	{
 		id: 'mjdj8123413d',
@@ -219,12 +219,12 @@ export const posts = [
 			],
 		},
 	},
-	{
+	/* {
 		id: 'cfdj8123413d',
 		user: '663awdcc9bc26cd4ddjawd32',
 		type: 'share',
 		ref: 'mjdj8123413d',
-	},
+	}, */
 
 	{
 		id: 'mjdj8123u59d',
@@ -235,10 +235,10 @@ export const posts = [
 			theme: 1
 		},
 	},
-	{
+	/* {
 		id: 'cfdj8123u59d',
 		user: '663awdcc9bc26cd4ddjawd32',
 		type: 'share',
 		ref: 'mjdj8123u59d',
-	},
+	}, */
 ]
