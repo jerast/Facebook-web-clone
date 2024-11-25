@@ -7,7 +7,6 @@
 # Code directories and files
 node_modules
 dist
-docs
 original
 templates
 *.jpg
