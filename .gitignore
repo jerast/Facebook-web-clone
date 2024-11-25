@@ -1,0 +1,17 @@
+# Environment
+.env
+
+# Logs
+*.log
+
+# Code directories and files
+node_modules
+dist
+original
+templates
+*.jpg
+*.png
+*.webp
+
+# Editor directories and files
+.vscode
